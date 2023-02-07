@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #31AA66;
+}
+
+.button {
+  display: inline-block;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: #000;
+  font-size: 1rem;
+  border: 1px #000 solid;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*# sourceMappingURL=main.css.map */
