@@ -1,0 +1,28 @@
+.button {
+    display: inline-block;
+    background-color: $grey;
+    text-decoration: none;
+    padding: 2rem;
+    color: $white;
+    font-size: rem(16);
+
+    border: 1px black solid;
+    
+    &:hover {
+        background: lighten($color: $grey, $amount: 10);
+    }
+
+    &--success {
+        background: $green;
+    }
+    &--success:hover {
+        background: lighten($color: $green, $amount: 10);
+    }
+
+    &--alert {
+        background: $red;
+    }
+    &--alert:hover {
+        background: lighten($color: $red, $amount: 10);
+    }
+}
