@@ -6,6 +6,13 @@
 
 body {
   background-color: #31AA66;
+  height: 2000px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
@@ -22,6 +29,17 @@ body {
 .button:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.secondaryTitle {
+  border-bottom: 1px solid #000;
+}
+.secondaryTitle > h2 {
+  margin-bottom: 0;
+  font-weight: normal;
+  position: relative;
+  left: -35%;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */

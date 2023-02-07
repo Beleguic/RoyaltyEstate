@@ -1,0 +1,11 @@
+.secondaryTitle {
+    border-bottom: 1px solid $black;
+
+    & > h2 {
+        margin-bottom: 0;
+        font-weight: normal;
+        position: relative;
+        left: -35%;  
+        text-transform: uppercase;
+    }
+}

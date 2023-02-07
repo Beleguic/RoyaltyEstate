@@ -5,4 +5,11 @@
 
 body {
     background-color: $green;
+    height: 2000px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
