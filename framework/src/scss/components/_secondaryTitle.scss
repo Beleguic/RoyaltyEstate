@@ -1,5 +1,6 @@
 .secondaryTitle {
     border-bottom: 1px solid $black;
+    transform: translateX(25%);
 
     & > h2 {
         margin-bottom: 0;
