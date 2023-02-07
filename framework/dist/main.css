@@ -20,7 +20,7 @@ h2 {
 }
 
 .banner {
-  display: inline;
+  display: block;
   position: relative;
   width: 100%;
   padding-top: 42%;
