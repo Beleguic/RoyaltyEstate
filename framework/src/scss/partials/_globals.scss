@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $light-grey;
+    font-family: $font-montserrat;
+}
+
+h1 {
+    font-size: rem(24);
+    font-family: $font-lato;
+}
+
+h2 {
+    font-size: rem(16);
+    font-family: $font-lato;
+}
