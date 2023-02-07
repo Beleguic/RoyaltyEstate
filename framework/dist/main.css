@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #31AA66;
+  background-image: url("../src/assets/images/acceuil.jpg");
   height: 2000px;
   margin: 0;
   padding: 0;
@@ -54,6 +54,8 @@ section {
     flex-wrap: nowrap;
     width: 100%;
     justify-content: space-between;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 nav img {
