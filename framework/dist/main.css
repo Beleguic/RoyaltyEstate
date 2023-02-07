@@ -33,6 +33,7 @@ section {
 
 .secondaryTitle {
   border-bottom: 1px solid #000;
+  transform: translateX(25%);
 }
 .secondaryTitle > h2 {
   margin-bottom: 0;
