@@ -7,6 +7,8 @@
 body {
   background-color: #31AA66;
   height: 2000px;
+  margin: 0;
+  padding: 0;
 }
 
 section {
@@ -41,6 +43,22 @@ section {
   position: relative;
   left: -35%;
   text-transform: uppercase;
+}
+
+@media (max-width: 400px) {
+  nav {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+nav img {
+  width: 25px;
+  margin: 5px 25px;
 }
 
 /*# sourceMappingURL=main.css.map */

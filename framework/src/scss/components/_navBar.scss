@@ -1,0 +1,16 @@
+nav {
+    @media (max-width: 400px) {
+        bottom: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    & img{
+        width: 25px;
+        margin: 5px 25px ;
+    }
+}
