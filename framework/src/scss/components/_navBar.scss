@@ -1,5 +1,5 @@
 nav {
-    @media (max-width: 400px) {
+    @media (max-width: $mobile) {
         bottom: 0;
         position: fixed;
         display: flex;

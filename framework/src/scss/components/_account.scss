@@ -1,5 +1,5 @@
 .account {
-    @media (max-width: 400px) {
+    @media (max-width: $mobile) {
         background-color: $white;
         position: fixed;
         left: 0;

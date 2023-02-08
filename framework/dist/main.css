@@ -50,7 +50,7 @@ section {
   text-transform: uppercase;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   nav {
     bottom: 0;
     position: fixed;
@@ -77,7 +77,7 @@ nav img {
   font-weight: 200;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   header {
     display: flex;
     flex-direction: row;
@@ -87,7 +87,7 @@ nav img {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .account {
     background-color: #FFF;
     position: fixed;
