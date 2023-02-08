@@ -63,4 +63,22 @@ nav img {
   margin: 5px 25px;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+@media (max-width: 400px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
