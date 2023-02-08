@@ -8,6 +8,7 @@
     border: 1px $black solid;
     border-radius: 50px;
     transition: all 0.5s;
+    width: fit-content;
 
     &:hover {
         cursor: pointer;

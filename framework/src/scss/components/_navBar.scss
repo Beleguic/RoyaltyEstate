@@ -9,6 +9,7 @@ nav {
         justify-content: space-between;
         backdrop-filter: blur(3px);
         background-color: rgba($color: $white, $alpha: 0.2);
+        box-shadow: 0 -1px 10px $grey;
     }
     
     & img{
