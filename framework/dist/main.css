@@ -123,11 +123,11 @@ nav img {
     margin: 0 60px;
   }
   .account form div:nth-child(2) {
-    margin-bottom: 30px;
+    margin-bottom: 5vh;
   }
   .account form div:nth-child(1) img {
     width: 30px;
-    margin-top: 10px;
+    margin-top: 1vh;
   }
   .account form div img {
     width: 20px;
@@ -137,7 +137,7 @@ nav img {
     border: 1px solid #000;
     border-radius: 50px;
     justify-content: left;
-    margin: 5px 0;
+    margin: 2vh 0;
     padding-left: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -152,7 +152,7 @@ nav img {
   }
   .account form div.delimiter span {
     width: 100%;
-    margin: 30px 10px;
+    margin: 5vh 10px;
     border-bottom: 1px solid #000;
   }
 }

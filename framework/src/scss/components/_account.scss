@@ -37,12 +37,12 @@
                 margin:  0 60px;
 
                 &:nth-child(2) {
-                    margin-bottom: 30px;
+                    margin-bottom: 5vh;
                 }
 
                 &:nth-child(1) img {
                     width: 30px;
-                    margin-top: 10px;
+                    margin-top: 1vh;
                 }
 
                 & img {
@@ -54,7 +54,7 @@
                     border: 1px solid $black;
                     border-radius: 50px;
                     justify-content: left;
-                    margin: 5px 0;
+                    margin: 2vh 0;
                     padding-left: 20px;
                     margin-left: 20px;
                     margin-right: 20px;
@@ -69,7 +69,7 @@
 
                     & span {
                         width: 100%;
-                        margin: 30px 10px;
+                        margin: 5vh 10px;
                         border-bottom: 1px solid $black;
                     }
                 }
