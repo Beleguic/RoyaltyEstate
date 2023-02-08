@@ -1,2 +1,39 @@
-
-// Commentaire JavaScript
+$(document).ready(function(){
+    $('#account-button').on('click',function(){
+        $('#login').toggleClass('account-open');
+        $('#login').toggleClass('account-close');
+        $('#inscription').toggleClass('account-open');
+        $('#inscription').toggleClass('account-close');
+        $('#login').toggleClass('account-show');
+    })
+    $('#close-login').on('click',function(){
+        $('#login').removeClass('account-open');
+        $('#login').addClass('account-close');
+        $('#inscription').removeClass('account-open');
+        $('#inscription').addClass('account-close');
+        $('#login').removeClass('account-show');
+        $('#inscription').removeClass('account-show');
+    })
+    $('#close-inscription').on('click',function(){
+        $('#login').removeClass('account-open');
+        $('#login').addClass('account-close');
+        $('#inscription').removeClass('account-open');
+        $('#inscription').addClass('account-close');
+        $('#login').removeClass('account-show');
+        $('#inscription').removeClass('account-show');
+        $('#login').removeClass('login-hide');
+        $('#inscription').addClass('inscription-hide');
+    })
+    $('#inscription-link').on('click',function(){
+        $('#login').removeClass('account-show');
+        $('#inscription').addClass('account-show');
+        $('#inscription').removeClass('inscription-hide');
+        $('#login').addClass('login-hide');
+    })
+    $('#login-link').on('click',function(){
+        $('#login').addClass('account-show');
+        $('#inscription').removeClass('account-show');
+        $('#inscription').addClass('inscription-hide');
+        $('#login').removeClass('login-hide');
+    })
+})

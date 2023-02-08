@@ -1,0 +1,101 @@
+.account {
+    @media (max-width: 400px) {
+        background-color: $white;
+        position: fixed;
+        left: 0;
+        width: 100vw;
+        height: 85vh;
+        transition: all 0.5s;
+
+        & input {
+            border: none;
+            background-color: none;
+            border-radius: 50px;
+            width: 100%;
+
+            &#stay_connected {
+                width: fit-content;
+            }
+        }
+
+        & a {
+            color: $black;
+            font-size: 0.7rem;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+
+            & div {
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+                margin:  0 60px;
+
+                &:nth-child(2) {
+                    margin-bottom: 30px;
+                }
+
+                &:nth-child(1) img {
+                    width: 30px;
+                    margin-top: 10px;
+                }
+
+                & img {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+
+                &.input{
+                    border: 1px solid $black;
+                    border-radius: 50px;
+                    justify-content: left;
+                    margin: 5px 0;
+                    padding-left: 20px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+                &.delimiter {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0;
+
+                    & span {
+                        width: 100%;
+                        margin: 30px 10px;
+                        border-bottom: 1px solid $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.account-close {
+    bottom: -100vh;
+    opacity: 0;
+}
+
+.account-open {
+    bottom: 0;
+    opacity: 1;
+}
+
+.login-hide {
+    left: -100vw;
+}
+
+.inscription-hide {
+    left: 100vw;
+}
+
+.account-show {
+    left: 0;
+}

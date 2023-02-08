@@ -6,6 +6,9 @@
 
 body {
   background-image: url("../src/assets/images/acceuil.jpg");
+  background-repeat: no-repeat;
+  background-position: 30%;
+  background-size: auto 100%;
   height: 2000px;
   margin: 0;
   padding: 0;
@@ -27,6 +30,7 @@ section {
   border: 1px #000 solid;
   border-radius: 50px;
   transition: all 0.5s;
+  width: fit-content;
 }
 .button:hover {
   cursor: pointer;
@@ -36,6 +40,7 @@ section {
 .secondaryTitle {
   border-bottom: 1px solid #000;
   transform: translateX(25%);
+  font-size: 0.8rem;
 }
 .secondaryTitle > h2 {
   margin-bottom: 0;
@@ -56,6 +61,7 @@ section {
     justify-content: space-between;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -1px 10px #AAA;
   }
 }
 nav img {
@@ -79,6 +85,98 @@ nav img {
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
   }
+}
+
+@media (max-width: 400px) {
+  .account {
+    background-color: #FFF;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 85vh;
+    transition: all 0.5s;
+  }
+  .account input {
+    border: none;
+    background-color: none;
+    border-radius: 50px;
+    width: 100%;
+  }
+  .account input#stay_connected {
+    width: fit-content;
+  }
+  .account a {
+    color: #000;
+    font-size: 0.7rem;
+  }
+  .account form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .account form div {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0 60px;
+  }
+  .account form div:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .account form div:nth-child(1) img {
+    width: 30px;
+    margin-top: 10px;
+  }
+  .account form div img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  .account form div.input {
+    border: 1px solid #000;
+    border-radius: 50px;
+    justify-content: left;
+    margin: 5px 0;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .account form div.delimiter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  .account form div.delimiter span {
+    width: 100%;
+    margin: 30px 10px;
+    border-bottom: 1px solid #000;
+  }
+}
+
+.account-close {
+  bottom: -100vh;
+  opacity: 0;
+}
+
+.account-open {
+  bottom: 0;
+  opacity: 1;
+}
+
+.login-hide {
+  left: -100vw;
+}
+
+.inscription-hide {
+  left: 100vw;
+}
+
+.account-show {
+  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
