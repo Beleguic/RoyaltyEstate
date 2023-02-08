@@ -17,10 +17,19 @@
                 width: fit-content;
             }
         }
+        
+        & img {
+            width: 20px;
+            margin-right: 10px;
+        }
 
         & a {
             color: $black;
             font-size: 0.7rem;
+        }
+
+        & #forgot-password {
+            margin-bottom: 4vh;
         }
 
         & form {
@@ -30,11 +39,10 @@
             width: 100%;
 
             & div {
-                margin: 5px;
                 display: flex;
                 justify-content: center;
                 padding: 5px;
-                margin:  0 60px;
+                margin:  0 5vh;
 
                 &:nth-child(2) {
                     margin-bottom: 5vh;
@@ -42,12 +50,8 @@
 
                 &:nth-child(1) img {
                     width: 30px;
-                    margin-top: 1vh;
-                }
-
-                & img {
-                    width: 20px;
-                    margin-right: 10px;
+                    margin-top: 4vh;
+                    margin-bottom: 5vh;
                 }
 
                 &.input{

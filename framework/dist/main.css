@@ -31,6 +31,7 @@ section {
   border-radius: 50px;
   transition: all 0.5s;
   width: fit-content;
+  margin: 0;
 }
 .button:hover {
   cursor: pointer;
@@ -105,9 +106,16 @@ nav img {
   .account input#stay_connected {
     width: fit-content;
   }
+  .account img {
+    width: 20px;
+    margin-right: 10px;
+  }
   .account a {
     color: #000;
     font-size: 0.7rem;
+  }
+  .account #forgot-password {
+    margin-bottom: 4vh;
   }
   .account form {
     display: flex;
@@ -116,22 +124,18 @@ nav img {
     width: 100%;
   }
   .account form div {
-    margin: 5px;
     display: flex;
     justify-content: center;
     padding: 5px;
-    margin: 0 60px;
+    margin: 0 5vh;
   }
   .account form div:nth-child(2) {
     margin-bottom: 5vh;
   }
   .account form div:nth-child(1) img {
     width: 30px;
-    margin-top: 1vh;
-  }
-  .account form div img {
-    width: 20px;
-    margin-right: 10px;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
   }
   .account form div.input {
     border: 1px solid #000;

@@ -43,15 +43,15 @@
             </div>
         </section>
         <section id="login" class="account account-close">
+            <div>
+                <img src="./src/assets/images/cross-circle.svg" id="close-login">
+            </div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Connectez-vous
+                </h2>
+            </div>
             <form action="/traitement" method="post">
-                <div>
-                    <img src="./src/assets/images/cross-circle.svg" id="close-login">
-                </div>
-                <div class="secondaryTitle">
-                    <h2 >
-                        Connectez-vous
-                    </h2>
-                </div>
                 <div class="input">
                     <img src="./src/assets/images/account.svg"/>
                     <input type="text" id="login-mail" name="user_mail" placeholder="Adresse mail">
@@ -65,7 +65,7 @@
                     <span>Rester connecté(e)</span>
                 </div>
                 <div>
-                    <a href="#">Mot de passe oublié ?</a>
+                    <a id="forgot-password" href="#">Mot de passe oublié ?</a>
                 </div>
                 <div>
                     <a class="button">
