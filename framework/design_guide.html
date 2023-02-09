@@ -38,99 +38,120 @@
             </div>
             <div class="secondaryTitle">
                 <h2 >
-                    Titre plutot long
+                    Titre plutot long <br> 
+                    Titre plutot long  
                 </h2>
             </div>
         </section>
-        <section id="login" class="account account-close">
+        <section class="account" id="account">
             <div>
-                <img src="./src/assets/images/cross-circle.svg" id="close-login">
+                <section id="login">
+                    <div>
+                        <img src="./src/assets/images/cross-circle.svg" class="close">
+                    </div>
+                    <div class="secondaryTitle">
+                        <h2 >
+                            Connectez-vous
+                        </h2>
+                    </div>
+                    <form action="/traitement" method="post">
+                        <div class="input">
+                            <img src="./src/assets/images/account.svg"/>
+                            <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/lock.svg"/>
+                            <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="stay_connected" name="user_stay_connected">
+                            <span>Rester connecté(e)</span>
+                        </div>
+                        <div>
+                            <a id="forgot-password" href="#">Mot de passe oublié ?</a>
+                        </div>
+                        <div>
+                            <a class="button">
+                                SE CONNECTER
+                            </a>
+                        </div>
+                        <div class="delimiter">
+                            <span></span>
+                            ou
+                            <span></span>
+                        </div>
+                        <div>
+                            <a class="button" id="inscription-link">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+                    </form>
+                </section>
+                <section id="inscription">
+                    <div>
+                        <img src="./src/assets/images/cross-circle.svg" class="close">
+                    </div>
+                    <div class="secondaryTitle">
+                        <h2 >
+                            Inscrivez-vous
+                        </h2>
+                    </div>
+                    <form action="/traitement" method="post">
+                        <div class="input">
+                            <img src="./src/assets/images/account.svg"/>
+                            <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/account.svg"/>
+                            <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/lock.svg"/>
+                            <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/lock.svg"/>
+                            <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
+                        </div>
+                        <div>
+                            <a class="button">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+                        <div class="delimiter">
+                            <span></span>
+                            ou
+                            <span></span>
+                        </div>
+                        <div>
+                            <a class="button"  id="login-link">
+                                SE CONNECTER
+                            </a>
+                        </div>
+                    </form>
+                </section>
             </div>
-            <div class="secondaryTitle">
-                <h2 >
-                    Connectez-vous
-                </h2>
-            </div>
-            <form action="/traitement" method="post">
-                <div class="input">
-                    <img src="./src/assets/images/account.svg"/>
-                    <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
-                </div>
-                <div class="input">
-                    <img src="./src/assets/images/lock.svg"/>
-                    <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
-                </div>
-                <div>
-                    <input type="checkbox" id="stay_connected" name="user_stay_connected">
-                    <span>Rester connecté(e)</span>
-                </div>
-                <div>
-                    <a id="forgot-password" href="#">Mot de passe oublié ?</a>
-                </div>
-                <div>
-                    <a class="button">
-                        SE CONNECTER
-                    </a>
-                </div>
-                <div class="delimiter">
-                    <span></span>
-                    ou
-                    <span></span>
-                </div>
-                <div>
-                    <a class="button" id="inscription-link">
-                        S'INSCRIRE
-                    </a>
-                </div>
-            </form>
-        </section>
-        <section id="inscription" class="account account-close inscription-hide">
-            <div>
-                <img src="./src/assets/images/cross-circle.svg" id="close-inscription">
-            </div>
-            <div class="secondaryTitle">
-                <h2 >
-                    Inscrivez-vous
-                </h2>
-            </div>
-            <form action="/traitement" method="post">
-                <div class="input">
-                    <img src="./src/assets/images/account.svg"/>
-                    <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
-                </div>
-                <div class="input">
-                    <img src="./src/assets/images/account.svg"/>
-                    <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
-                </div>
-                <div class="input">
-                    <img src="./src/assets/images/lock.svg"/>
-                    <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
-                </div>
-                <div class="input">
-                    <img src="./src/assets/images/lock.svg"/>
-                    <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
-                </div>
-                <div>
-                    <a class="button">
-                        S'INSCRIRE
-                    </a>
-                </div>
-                <div class="delimiter">
-                    <span></span>
-                    ou
-                    <span></span>
-                </div>
-                <div>
-                    <a class="button"  id="login-link">
-                        SE CONNECTER
-                    </a>
-                </div>
-            </form>
         </section>
         <nav>
-            <img src="./src/assets/images/menu-burger.svg"/>
-            <img src="./src/assets/images/search.svg"/>
-            <img id="account-button" src="./src/assets/images/account.svg"/>
+            <div class="nav">
+                <div>
+                    Nos biens
+                </div>
+                <div>
+                    Contact
+                </div>
+                <div>
+                    Recherche
+                </div>
+                <div id="login-nav">
+                    Connexion
+                </div>
+            </div>
+            <div class="burger">
+                <img src="./src/assets/images/menu-burger.svg"/>
+                <img src="./src/assets/images/search.svg"/>
+                <img id="account-button-burger" src="./src/assets/images/account.svg"/>
+            </div>
         </nav>
     </body>
 </html>

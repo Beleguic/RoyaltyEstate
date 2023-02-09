@@ -52,7 +52,7 @@ section {
 }
 
 @media (max-width: 500px) {
-  nav {
+  nav .burger {
     bottom: 0;
     position: fixed;
     display: flex;
@@ -63,6 +63,30 @@ section {
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 -1px 10px #AAA;
+  }
+  nav .nav {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  nav .nav {
+    top: 0;
+    right: 3vw;
+    height: 45px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 50vw;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+  }
+  nav .nav div {
+    cursor: pointer;
+  }
+  nav .burger {
+    display: none;
   }
 }
 nav img {
@@ -79,6 +103,9 @@ nav img {
   color: #FFF;
 }
 
+header {
+  z-index: 2;
+}
 @media (max-width: 500px) {
   header {
     display: flex;
@@ -88,98 +115,119 @@ nav img {
     width: 100%;
   }
 }
-
-@media (max-width: 500px) {
-  .account {
-    background-color: #FFF;
-    position: fixed;
-    left: 0;
-    width: 100vw;
-    height: 85vh;
-    transition: all 0.5s;
-  }
-  .account div:nth-child(1) {
-    margin-top: 4vh;
-  }
-  .account div:nth-child(2) {
-    margin: 4vh;
-  }
-  .account input {
-    border: none;
-    background-color: none;
-    border-radius: 50px;
-    width: 100%;
-  }
-  .account input#stay_connected {
-    width: fit-content;
-  }
-  .account img {
-    width: 30px;
-    margin-right: 10px;
-  }
-  .account a {
-    color: #000;
-    font-size: 0.7rem;
-  }
-  .account #forgot-password {
-    margin-bottom: 4vh;
-  }
-  .account form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .account form div {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin: 0 4vh;
-  }
-  .account form div.input {
-    border: 1px solid #000;
-    border-radius: 50px;
-    justify-content: left;
-    margin: 1vh 0;
-    padding-left: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .account form div.delimiter {
+@media (min-width: 500px) {
+  header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: left;
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    margin: 0;
-  }
-  .account form div.delimiter span {
-    width: 100%;
-    margin: 5vh 10px;
-    border-bottom: 1px solid #000;
+    padding-left: 3vw;
   }
 }
 
-.account-close {
-  bottom: -100vh;
-  opacity: 0;
-}
-
-.account-open {
+.account {
+  background-color: #FFF;
   bottom: 0;
-  opacity: 1;
+  height: 85vh;
+  transition: all 0.5s;
+  overflow: hidden;
 }
-
-.login-hide {
-  left: -100vw;
+@media (max-width: 500px) {
+  .account {
+    bottom: -100vh;
+    width: 100vw;
+    left: 0;
+    position: fixed;
+  }
 }
-
-.inscription-hide {
-  left: 100vw;
+@media (min-width: 500px) {
+  .account {
+    top: -85vh;
+    width: 30vw;
+    right: 0;
+    position: absolute;
+  }
+  .account section .close {
+    display: none;
+  }
 }
-
-.account-show {
-  left: 0;
+.account > div {
+  position: absolute;
+  left: 0vw;
+  top: 0vh;
+  height: 100%;
+  width: 100%;
+}
+.account section {
+  transition: all 0.5s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.account section div:nth-child(1) {
+  margin-top: 4vh;
+}
+.account section div:nth-child(2) {
+  margin: 4vh;
+}
+.account section .close {
+  width: 30px;
+  margin-right: 10px;
+}
+.account section img {
+  width: 20px;
+  margin-right: 10px;
+}
+.account section input {
+  border: none;
+  background-color: none;
+  border-radius: 50px;
+  width: 100%;
+}
+.account section input#stay_connected {
+  width: fit-content;
+}
+.account section a {
+  color: #000;
+  font-size: 0.7rem;
+}
+.account section #forgot-password {
+  margin-bottom: 4vh;
+}
+.account section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.account section form div {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 0 4vh;
+}
+.account section form div.input {
+  border: 1px solid #000;
+  border-radius: 50px;
+  justify-content: left;
+  margin: 1vh 0;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.account section form div.delimiter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+.account section form div.delimiter span {
+  width: 100%;
+  margin: 5vh 10px;
+  border-bottom: 1px solid #000;
 }
 
 /*# sourceMappingURL=main.css.map */
