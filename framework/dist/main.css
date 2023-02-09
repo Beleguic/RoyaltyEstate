@@ -44,7 +44,7 @@ section {
   font-size: 0.8rem;
 }
 .secondaryTitle > h2 {
-  margin-bottom: 0;
+  margin: 0;
   font-weight: normal;
   position: relative;
   left: -35%;
@@ -76,6 +76,7 @@ nav img {
   align-items: center;
   text-transform: uppercase;
   font-weight: 200;
+  color: #FFF;
 }
 
 @media (max-width: 500px) {
@@ -97,6 +98,12 @@ nav img {
     height: 85vh;
     transition: all 0.5s;
   }
+  .account div:nth-child(1) {
+    margin-top: 4vh;
+  }
+  .account div:nth-child(2) {
+    margin: 4vh;
+  }
   .account input {
     border: none;
     background-color: none;
@@ -107,7 +114,7 @@ nav img {
     width: fit-content;
   }
   .account img {
-    width: 20px;
+    width: 30px;
     margin-right: 10px;
   }
   .account a {
@@ -127,21 +134,13 @@ nav img {
     display: flex;
     justify-content: center;
     padding: 5px;
-    margin: 0 5vh;
-  }
-  .account form div:nth-child(2) {
-    margin-bottom: 5vh;
-  }
-  .account form div:nth-child(1) img {
-    width: 30px;
-    margin-top: 4vh;
-    margin-bottom: 5vh;
+    margin: 0 4vh;
   }
   .account form div.input {
     border: 1px solid #000;
     border-radius: 50px;
     justify-content: left;
-    margin: 2vh 0;
+    margin: 1vh 0;
     padding-left: 20px;
     margin-left: 20px;
     margin-right: 20px;
