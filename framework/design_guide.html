@@ -43,29 +43,29 @@
             </div>
         </section>
         <section id="login" class="account account-close">
+            <div>
+                <img src="./src/assets/images/cross-circle.svg" id="close-login">
+            </div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Connectez-vous
+                </h2>
+            </div>
             <form action="/traitement" method="post">
-                <div>
-                    <img src="./src/assets/images/cross-circle.svg" id="close-login">
-                </div>
-                <div class="secondaryTitle">
-                    <h2 >
-                        Connectez-vous
-                    </h2>
-                </div>
                 <div class="input">
                     <img src="./src/assets/images/account.svg"/>
-                    <input type="text" id="login-mail" name="user_mail" placeholder="Adresse mail">
+                    <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
                 </div>
                 <div class="input">
                     <img src="./src/assets/images/lock.svg"/>
-                    <input type="email" id="login-password" name="user_password" placeholder="Mot de passe">
+                    <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
                 </div>
                 <div>
                     <input type="checkbox" id="stay_connected" name="user_stay_connected">
                     <span>Rester connecté(e)</span>
                 </div>
                 <div>
-                    <a href="#">Mot de passe oublié ?</a>
+                    <a id="forgot-password" href="#">Mot de passe oublié ?</a>
                 </div>
                 <div>
                     <a class="button">
@@ -85,26 +85,30 @@
             </form>
         </section>
         <section id="inscription" class="account account-close inscription-hide">
+            <div>
+                <img src="./src/assets/images/cross-circle.svg" id="close-inscription">
+            </div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Inscrivez-vous
+                </h2>
+            </div>
             <form action="/traitement" method="post">
-                <div>
-                    <img src="./src/assets/images/cross-circle.svg" id="close-inscription">
-                </div>
-                <div class="secondaryTitle">
-                    <h2 >
-                        Inscrivez-vous
-                    </h2>
+                <div class="input">
+                    <img src="./src/assets/images/account.svg"/>
+                    <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
                 </div>
                 <div class="input">
                     <img src="./src/assets/images/account.svg"/>
-                    <input type="text" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
+                    <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
                 </div>
                 <div class="input">
                     <img src="./src/assets/images/lock.svg"/>
-                    <input type="email" id="inscription-password" name="user_password" placeholder="Mot de passe">
+                    <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
                 </div>
                 <div class="input">
                     <img src="./src/assets/images/lock.svg"/>
-                    <input type="email" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
+                    <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
                 </div>
                 <div>
                     <a class="button">
