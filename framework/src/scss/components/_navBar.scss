@@ -1,0 +1,50 @@
+nav {
+    @media (max-width: $mobile) {
+        .burger {
+            bottom: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: space-between;
+            backdrop-filter: blur(3px);
+            background-color: rgba($color: $white, $alpha: 0.2);
+            box-shadow: 0 -1px 10px $grey;
+        }
+
+        & .nav {
+            display: none;
+        }
+    }
+
+    @media (min-width: $mobile) {
+
+        & .nav {
+            top: 0;
+            right: 3vw;
+            height: 45px;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 50vw;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+
+            & div {
+                cursor: pointer;
+            }
+        }
+
+        & .burger {
+            display: none;
+        }
+    }
+    
+    & img{
+        width: 25px;
+        margin: 5px 25px ;
+    }
+}

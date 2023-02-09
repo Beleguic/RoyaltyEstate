@@ -2,9 +2,3 @@
     $base: 16;
     @return calc($value/$base) * 1rem;
 }
-
-@mixin cover-bg {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}

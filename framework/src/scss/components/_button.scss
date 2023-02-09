@@ -1,28 +1,18 @@
 .button {
     display: inline-block;
-    background-color: $grey;
+    background-color: transparent;
     text-decoration: none;
-    padding: 2rem;
-    color: $white;
+    padding: 1rem 2rem;
+    color: $black;
     font-size: rem(16);
+    border: 1px $black solid;
+    border-radius: 50px;
+    transition: all 0.5s;
+    width: fit-content;
+    margin: 0;
 
-    border: 1px black solid;
-    
     &:hover {
-        background: lighten($color: $grey, $amount: 10);
-    }
-
-    &--success {
-        background: $green;
-    }
-    &--success:hover {
-        background: lighten($color: $green, $amount: 10);
-    }
-
-    &--alert {
-        background: $red;
-    }
-    &--alert:hover {
-        background: lighten($color: $red, $amount: 10);
+        cursor: pointer;
+        background-color: rgba($color: $white, $alpha: 0.2);
     }
 }
