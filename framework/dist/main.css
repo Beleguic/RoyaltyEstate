@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;1,300;1,500;1,700&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -12,6 +16,7 @@ body {
   height: 2000px;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 section {
@@ -24,6 +29,15 @@ section {
   width: 100%;
   height: 400px;
   background: #d6d6d6;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+nav, ul {
+  list-style: none;
 }
 
 .button {
@@ -48,9 +62,40 @@ section {
   color: #FFF;
 }
 
+.sliderCaption {
+  position: absolute;
+  bottom: 0;
+  align-self: start;
+  width: 100%;
+  padding: 1.25em;
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.sliderCaption .secondaryTitle {
+  width: fit-content;
+}
+.sliderCaption .secondaryTitle > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.sliderCaption h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+section#sliderCaption {
+  position: relative;
+  height: 8em;
+}
+
 .secondaryTitle {
-  border-bottom: 1px solid #000;
-  transform: translateX(25%);
+  border-bottom: 1px solid currentColor;
+  transform: translateX(35%);
   font-size: 0.8rem;
 }
 .secondaryTitle > h2 {
@@ -109,8 +154,10 @@ nav img {
   flex-direction: row;
   align-items: center;
   text-transform: uppercase;
-  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   color: #FFF;
+  font-size: 1.4rem;
 }
 
 header {
@@ -316,6 +363,69 @@ header {
 
 .slider .slider-items .item.active {
   display: block;
+}
+
+section#filterMenu {
+  background-color: #FFF;
+}
+
+.filterChoice {
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px;
+}
+.filterChoice h2 {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+.filterChoice button {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  background: #FFF;
+  border: 1px solid currentColor;
+  border-radius: 20em;
+  padding: 1em;
+  height: 4rem;
+  text-align: left;
+}
+.filterChoice button::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+.filterChoice button:focus::after {
+  transform: rotate(225deg);
+}
+.filterChoice .dropdownMenuList {
+  position: relative;
+  z-index: 0;
+  background-color: #FFF;
+  width: 100%;
+  margin: 0;
+  border-radius: 0 0 20px 20px;
+  height: 0;
+  overflow: hidden;
+}
+.filterChoice .dropdownMenuList.toogled {
+  top: -2rem;
+  padding: 2rem 0 1rem 0;
+  height: 100%;
+  border: 1px solid currentColor;
+}
+.filterChoice .dropdownMenuList li {
+  padding: 10px;
+}
+.filterChoice .dropdownMenuList li:hover {
+  background-color: #e6e6e6;
 }
 
 /*# sourceMappingURL=main.css.map */
