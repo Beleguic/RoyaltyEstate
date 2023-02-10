@@ -1,0 +1,30 @@
+.sliderCaption {
+    position: absolute;
+    bottom: 0;
+    align-self: start;
+    width: 100%;
+    padding: 1.25em;
+    font-family: $font-montserrat;
+    color: $white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0) 100%);
+    
+    .secondaryTitle {
+        width: fit-content;
+        & > h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    h3 {
+        padding: 0;
+        margin : 0;
+        font-weight: 300;
+        font-size: 1.25rem;
+    }
+}
+section#sliderCaption {
+    position: relative;
+    height: 8em;
+}

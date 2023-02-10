@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
-    font-family: $font-poppins;
 }
-
+html {
+    font-size: 16px;
+}
 body {
     background-image: url('../src/assets/images/acceuil.jpg');
     background-repeat: no-repeat;
@@ -11,10 +12,18 @@ body {
     height: 2000px;
     margin: 0;
     padding: 0;
+    font-family: $font-poppins;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+nav, ul {
+    list-style: none;
 }
