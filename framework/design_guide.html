@@ -12,7 +12,7 @@
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNGE5j9Ji3a30u_CO-kUBwhdqn9ayLOzo&callback=initMap"></script>
     </head>
     <body>
-        <header>
+        <section style="margin: 4vh">
             <div class="logo">
                 <span>
                     Royalty •
@@ -22,161 +22,94 @@
                     • estate
                 </span>
             </div>
-        </header>
-        <a class="button">
-            BUTTON
-        </a>
-        <section>
-            <div class="secondaryTitle">
-                <h2 >
-                    Titre
-                </h2>
-            </div>
-            <div class="secondaryTitle">
-                <h2 >
-                    Titre moyen
-                </h2>
-            </div>
-            <div class="secondaryTitle">
-                <h2 >
-                    Titre plutot long <br> 
-                    Titre plutot long  
-                </h2>
-            </div>
         </section>
-        <section id="sliderCaption">
-            <div class="sliderCaption">
+
+        
+        <section style="margin: 4vh">
+            <a class="button">
+                CLASSIQUE
+            </a>
+            <a class="button button--white">
+                WHITE
+            </a>
+            <a class="button button--hover">
+                CLASSIQUE HOVER
+            </a>
+            <a class="button button--white button--hover">
+                WHITE HOVER
+            </a>
+        </section>
+
+        
+        <section style="margin: 4vh">
+            <section>
                 <div class="secondaryTitle">
-                    <h2>Caption</h2>
+                    <h2 >
+                        Titre
+                    </h2>
                 </div>
-                <h3>- Country</h3>
-            </div>
+                <div class="secondaryTitle">
+                    <h2 >
+                        Titre moyen
+                    </h2>
+                </div>
+                <div class="secondaryTitle">
+                    <h2 >
+                        Titre plutot long <br> 
+                        Titre plutot long  
+                    </h2>
+                </div>
+            </section>
         </section>
-        <section id="filterMenu">
-            <div class="filterChoice">
-                <h2>Époque:</h2>
-                <button class="dropdownMenuToogle">veuillez sélectionner</button>
-                <ul class="dropdownMenuList" id="period-select">
-                    <li value="contemporain">Contemporain</li>
-                    <li value="classique">Classique</li>
-                    <li value="néo classique">Céo classique</li>
-                    <li value="baroque">Baroque</li>
-                    <li value="renaissance">Renaissance</li>
-                    <li value="moyen âge">Moyen Âge</li>
-                </ul>
-            </div>
-            <div class="filterChoice">
-                <h2>Localisation :</h2>
-                <button class="dropdownMenuToogle">veuillez sélectionner</button>
-                <ul class="dropdownMenuList" id="country-select">
-                    <li value="de">Allemagne</li>
-                    <li value="au">Autriche</li>
-                    <li value="be">Belgique</li>
-                    <li value="fr">France</li>
-                    <li value="gb">Grande Bretagne</li>
-                    <li value="ru">Russie</li>
-                </ul>
-            </div>
-            <div class="filterChoice">
-                <h2>Classement:</h2>
-                <button class="dropdownMenuToogle">veuillez sélectionner</button>
-                <ul class="dropdownMenuList" id="period-select">
-                    <li value="mh">Monument historique</li>
-                </ul>
-            </div>
-        </section>
-        <section class="account" id="account">*
-            <div>
-                <section id="login">
-                    <div>
-                        <img src="./src/assets/images/cross-circle.svg" class="close">
-                    </div>
+
+        
+        <section style="margin: 4vh">
+            <section id="sliderCaption">
+                <div class="sliderCaption">
                     <div class="secondaryTitle">
-                        <h2 >
-                            Connectez-vous
-                        </h2>
+                        <h2>Caption</h2>
                     </div>
-                    <form action="/traitement" method="post">
-                        <div class="input">
-                            <img src="./src/assets/images/account.svg"/>
-                            <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
-                        </div>
-                        <div class="input">
-                            <img src="./src/assets/images/lock.svg"/>
-                            <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
-                        </div>
-                        <div>
-                            <input type="checkbox" id="stay_connected" name="user_stay_connected">
-                            <span>Rester connecté(e)</span>
-                        </div>
-                        <div>
-                            <a id="forgot-password" href="#">Mot de passe oublié ?</a>
-                        </div>
-                        <div>
-                            <a class="button">
-                                SE CONNECTER
-                            </a>
-                        </div>
-                        <div class="delimiter">
-                            <span></span>
-                            ou
-                            <span></span>
-                        </div>
-                        <div>
-                            <a class="button" id="inscription-link">
-                                S'INSCRIRE
-                            </a>
-                        </div>
-                    </form>
-                </section>
-                <section id="inscription">
-                    <div>
-                        <img src="./src/assets/images/cross-circle.svg" class="close">
-                    </div>
-                    <div class="secondaryTitle">
-                        <h2 >
-                            Inscrivez-vous
-                        </h2>
-                    </div>
-                    <form action="/traitement" method="post">
-                        <div class="input">
-                            <img src="./src/assets/images/account.svg"/>
-                            <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
-                        </div>
-                        <div class="input">
-                            <img src="./src/assets/images/account.svg"/>
-                            <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
-                        </div>
-                        <div class="input">
-                            <img src="./src/assets/images/lock.svg"/>
-                            <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
-                        </div>
-                        <div class="input">
-                            <img src="./src/assets/images/lock.svg"/>
-                            <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
-                        </div>
-                        <div>
-                            <a class="button">
-                                S'INSCRIRE
-                            </a>
-                        </div>
-                        <div class="delimiter">
-                            <span></span>
-                            ou
-                            <span></span>
-                        </div>
-                        <div>
-                            <a class="button"  id="login-link">
-                                SE CONNECTER
-                            </a>
-                        </div>
-                    </form>
-                </section>
-            </div>
+                    <h3>- Country</h3>
+                </div>
+            </section>
         </section>
-        <section id="googleMap">
-            <div id="map"></div>
+        
+        <section style="margin: 4vh">
+            <section id="filterMenu">
+                <div class="filterChoice">
+                    <h2>Époque:</h2>
+                    <button class="dropdownMenuToogle">veuillez sélectionner</button>
+                    <ul class="dropdownMenuList" id="period-select">
+                        <li value="contemporain">Contemporain</li>
+                        <li value="classique">Classique</li>
+                        <li value="néo classique">Céo classique</li>
+                        <li value="baroque">Baroque</li>
+                        <li value="renaissance">Renaissance</li>
+                        <li value="moyen âge">Moyen Âge</li>
+                    </ul>
+                </div>
+                <div class="filterChoice">
+                    <h2>Localisation :</h2>
+                    <button class="dropdownMenuToogle">veuillez sélectionner</button>
+                    <ul class="dropdownMenuList" id="country-select">
+                        <li value="de">Allemagne</li>
+                        <li value="au">Autriche</li>
+                        <li value="be">Belgique</li>
+                        <li value="fr">France</li>
+                        <li value="gb">Grande Bretagne</li>
+                        <li value="ru">Russie</li>
+                    </ul>
+                </div>
+                <div class="filterChoice">
+                    <h2>Classement:</h2>
+                    <button class="dropdownMenuToogle">veuillez sélectionner</button>
+                    <ul class="dropdownMenuList" id="period-select">
+                        <li value="mh">Monument historique</li>
+                    </ul>
+                </div>
+            </section>
         </section>
+
         <section class="sliderSection">
             <div class="slider">
                 <div class="slider-items">
@@ -206,27 +139,6 @@
                   <!-- slider controls -->
              </div>
         </section>
-        <nav>
-            <div class="nav">
-                <div>
-                    Nos biens
-                </div>
-                <div>
-                    Contact
-                </div>
-                <div>
-                    Recherche
-                </div>
-                <div id="login-nav">
-                    Connexion
-                </div>
-            </div>
-            <div class="burger">
-                <img src="./src/assets/images/menu-burger.svg"/>
-                <img src="./src/assets/images/search.svg"/>
-                <img id="account-button-burger" src="./src/assets/images/account.svg"/>
-            </div>
-        </nav>
     </body>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="src/js/script.js" type="text/javascript"></script>
 </html>
