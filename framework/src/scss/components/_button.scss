@@ -11,8 +11,13 @@
     width: fit-content;
     margin: 0;
 
-    &:hover {
+    &:hover, &--hover {
         cursor: pointer;
-        background-color: rgba($color: $white, $alpha: 0.2);
+        background-color: rgba($color: $grey, $alpha: 0.2);
+    }
+
+    &--white {
+        border: 1px $white solid;
+        color: $white;
     }
 }
