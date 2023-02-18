@@ -8,7 +8,7 @@
     color: $white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
     
     .secondaryTitle {
         width: fit-content;
@@ -27,4 +27,6 @@
 section#sliderCaption {
     position: relative;
     height: 8em;
+    width: 500px;
+    margin: 0 auto;
 }
