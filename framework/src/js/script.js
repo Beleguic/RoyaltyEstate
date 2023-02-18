@@ -28,6 +28,10 @@ $(document).ready(function(){
             account.style.top = "45px";
         }
     })
+    //filter menu
+    $('.dropdownMenuButton').on('click', function() {
+        $(this).toggleClass('toggle');
+    })
 })
 
 //google maps 
@@ -86,3 +90,4 @@ function next(direction){
   slides[index].classList.add("active");     
 
 }
+
