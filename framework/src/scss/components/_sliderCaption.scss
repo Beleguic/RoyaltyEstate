@@ -1,6 +1,13 @@
+section#sliderCaption {
+    position: relative;
+    height: 8em;
+    width: 100%;
+    overflow: hidden;
+}
 .sliderCaption {
     position: absolute;
     bottom: 0;
+    left: 0;
     align-self: start;
     width: 100%;
     padding: 1.25em;
@@ -24,9 +31,9 @@
         font-size: 1.25rem;
     }
 }
-section#sliderCaption {
-    position: relative;
-    height: 8em;
-    width: 500px;
-    margin: 0 auto;
+@media screen  and (min-width: 800px){
+    section#sliderCaption {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
