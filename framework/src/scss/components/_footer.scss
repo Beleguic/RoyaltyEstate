@@ -1,0 +1,184 @@
+footer {
+    @media (min-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $white;
+        width: 100vw;
+        height: 60vh;
+        padding: 1rem;
+
+        & > :nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 3vh;
+            
+            & img {
+                z-index: 2;
+                width: 80px;
+                transform: translateX(50px);
+            }
+        }
+
+        & > :nth-child(2) {
+            line-height: 2em;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+            text-transform: uppercase;
+            
+            & img {
+                height: 20px;
+            }
+
+            & > :nth-child(n) {
+                line-height: 2em;
+                display: flex;
+                flex-direction: row;
+                width: 50%;
+                justify-content: space-around;
+                text-transform: uppercase;
+                
+                & img {
+                    height: 20px;
+                }
+            }
+        }
+
+        & > :nth-child(3) {
+            color: $grey;
+        }
+        
+        & > :nth-child(1) :nth-child(2) {
+            width: 100px;
+            height: 100px;
+            background-color: $black;
+            position: relative;
+            transform: translateX(-40px);
+            border-radius: 50%;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+            & input[type="image"] {
+                height: 2rem;
+            }
+
+            & input[type="email"] {
+                border: none;
+                border-bottom: 1px solid $black;
+                width: max-content;
+            }
+
+            & input[type="email"]::placeholder {
+                font-size: 1rem;
+                font-family: $font-poppins;
+            }
+        }
+    }
+    
+    @media (max-width: $mobile) {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $white;
+        width: 100vw;
+        height: 80vh;
+        padding: 1rem;
+
+        & > :nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            margin-top: -4vh;
+            
+            & img {
+                z-index: 2;
+                width: 50px;
+                transform: translateX(35px);
+            }
+        }
+
+        & > :nth-child(2) {
+            line-height: 2em;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            text-transform: uppercase;
+            
+            & img {
+                height: 20px;
+            }
+
+            & > :nth-child(n) {
+                line-height: 2em;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                text-transform: uppercase;
+            }
+
+            & > :nth-child(1) {
+                flex-direction: column;
+                margin-bottom: 5vh;
+                margin-top: -5vh;
+            }
+
+            & > :nth-child(2) {
+                flex-direction: row;
+            }
+        }
+
+        & > :nth-child(3) {
+            color: $grey;
+        }
+        
+        & > :nth-child(1) :nth-child(2) {
+            width: 70px;
+            height: 70px;
+            background-color: $black;
+            position: relative;
+            transform: translateX(-25px);
+            border-radius: 50%;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            margin-bottom: 5vh;
+
+            & input[type="image"] {
+                height: 2rem;
+            }
+
+            & input[type="email"] {
+                border: none;
+                border-bottom: 1px solid $black;
+                width: 100%;
+            }
+
+            & input[type="email"]::placeholder {
+                font-size: 1rem;
+                font-family: $font-poppins;
+            }
+        }
+    }
+}
