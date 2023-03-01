@@ -1,11 +1,35 @@
 $(document).ready(function(){
     //navbar mobile
-    $('#account-button-burger, .close').on('click',function(){
-        let account = document.getElementById('account')
+    let account = document.getElementById('account')
+    let burgerMenu = document.getElementById('burger-menu-id')
+
+    //close all
+    $('.close').on('click',function(){
+        if (burgerMenu.style.bottom === "0px"){
+            burgerMenu.style.bottom = "-100vh";
+        }
+        if (account.style.bottom === "0px"){
+            account.style.bottom = "-100vh";
+        }
+    })
+
+    //burger menu
+    $('#burger-menu-button-burger').on('click',function(){
+        if (burgerMenu.style.bottom === "0px"){
+            burgerMenu.style.bottom = "-100vh";
+        } else {
+            burgerMenu.style.bottom = "0";
+            account.style.bottom = "-100vh";
+        }
+    })
+
+    //account
+    $('#account-button-burger').on('click',function(){
         if (account.style.bottom === "0px"){
             account.style.bottom = "-100vh";
         } else {
             account.style.bottom = "0";
+            burgerMenu.style.bottom = "-100vh";
         }
     })
     document.getElementById('inscription').style.left = "100vw";
