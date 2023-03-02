@@ -77,41 +77,55 @@ function initMap() {
   });
 }
 
-// slider
-var slides=document.querySelector(".slider-items").children;
-var nextSlide=document.querySelector(".right-slide");
-var prevSlide=document.querySelector(".left-slide");
-var totalSlides=slides.length;
-var index=0;
+//New slider
+document.body.onload=function(){
+    nbrImages = 3;
+    position = 0;
+    container = document.getElementById("container");
+    leftBtn = document.getElementById("leftBtn");
+    rightBtn = document.getElementById("rightBtn");
+    container.style.width = (800 * nbrImages) + "px";
 
-nextSlide.onclick=function () {
-     next("next");
-}
-prevSlide.onclick=function () {
-     next("prev");
-}
-
-function next(direction){
-
-   if(direction=="next"){
-      index++;
-       if(index==totalSlides){
-        index=0;
-       }
-   } 
-   else{
-           if(index==0){
-            index=totalSlides-1;
-           }
-           else{
-            index--;
-           }
+    for(i = 1 ; i<= nbrImages ; i++){
+        div = document.createElement("div");
+        div.className = "photo";
+        div.style.backgroundImage = "url('./src/assets/images/chateau-" + i + ".jpg')";
+        container.appendChild(div);
     }
-
-  for(i=0;i<slides.length;i++){
-          slides[i].classList.remove("active");
-  }
-  slides[index].classList.add("active");     
-
+    displayBtnSlider();
+}
+rightBtn.onclick = function(){
+    if(position > -nbrImages+1){
+        position--;
+    }
+    container.style.transform= "translate("+ position * 800 + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
 }
 
+leftBtn.onclick = function(){
+    if(position < 0){
+        position++;
+    }
+    container.style.transform= "translate("+ position * 800 + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
+}
+
+function displayBtnSlider(){
+    if(position == -nbrImages+1)
+    {
+        rightBtn.style.visibility = "hidden";
+    }
+    else{
+        rightBtn.style.visibility = "visible";
+    }
+    if(position == 0)
+    {
+        leftBtn.style.visibility = "hidden";
+    }
+    else{
+        leftBtn.style.visibility = "visible";
+    }
+}
+//
