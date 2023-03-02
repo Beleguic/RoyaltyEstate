@@ -18,98 +18,188 @@
                     <h1>Welcome to the Design Guide</h1>
                 </div>
             </div>
+
+            <div class="contained">
+                <h2 class="componentTitle">- Font -</h2>
+                <section class="componentDisplay componentDisplay--left componentDisplay--big">
+                    <h2 style="margin:0;">Tailles de police</h2>
+                    <ul>
+                        <li>Mobile : 1rem = 20px</li>
+                        <li>Tablette : 1rem = 20px</li>
+                        <li>PC : 1rem = 16px</li>
+                    </ul>
+                    <h2 style="margin:0;">Police</h2>
+                    <div class="code">
+                        <div class="code-line">
+                            <span class="code--var">$font-montserrat</span> : <span class="code--value">'Montserrat', sans-serif;</span></div>
+                        </div>
+                    <ul>
+                        <li>Le logo : 1.4rem</li>
+                        <li>Titre de légende : 1.5rem</li>
+                        <li>Sous-titre de légende : 1.25rem</li>
+                    </ul>
+
+                    <div class="code">
+                        <div class="code-line">
+                            <span class="code--var">$font-poppins</span> : <span class="code--value">'Poppins', sans-serif</span>;
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Les titres : ?rem</li>
+                        <li>Le corps des articles : 1rem</li>
+                        <li>Les boutons : 1rem</li>
+                        <li>Les menus : ?rem</li>
+                    </ul>
+                </section>
+            </div> <!-- end Font -->
+            <div class="contained">
+                <h2 class="componentTitle">- Color palette -</h2>
+                <section class="componentDisplay componentDisplay--left componentDisplay--big" id="colorPalette">
+                    <div class="colorDisplay"><div class="color color--white" >#FFF</div><h3>$white</h3></div>
+                    <div class="colorDisplay"><div class="color color--light-grey">#F2F2F2</div><h3>$light-grey</h3></div>
+                    <div class="colorDisplay"><div class="color color--dark-grey">#444</div><h3>$dark-grey</h3></div>
+                    <div class="colorDisplay"><div class="color color--black">#000</div><h3>$black</h3></div>
+                </section>
+            </div> <!-- end Color palette -->
             <div class="contained">
                 <h2 class="componentTitle">- Logo -</h2>
-                <section class="componentDisplay">
-                    <div class="logo">
-                        <span>
-                            Royalty •
-                        </span>
-                        <img src="./src/assets/images/modele-logo-chateau.svg">
-                        <span>
-                            • estate
-                        </span>
+                <div class="card">
+                    <div class="code">
+                        <div class="code-line">font-family : <span class="code--value">Montserrat</span></div>
+                        <div class="code-line">font-size : <span class="code--value">1.4</span><span class="code--unit">rem</span></div>
+                        <div class="code-line">color : <span class="code--var">$white</span></div>
                     </div>
-                </section>
-            </div> <!-- end logo-->
+                    <section class="componentDisplay">
+                        <div class="logo">
+                            <span>
+                                Royalty •
+                            </span>
+                            <img src="./src/assets/images/modele-logo-chateau.svg">
+                            <span>
+                                • estate
+                            </span>
+                        </div>
+                    </section>
+                </div>
+            </div> <!-- end font-->
 
             <div class="contained">
                 <h2 class="componentTitle">- Button -</h2>
-                <section class="componentDisplay componentDisplay--dark">
-                    <div class="buttonDisplay">
-                        <a class="button">
-                            CLASSIQUE
-                        </a>
-                        <a class="button button--white">
-                            WHITE
-                        </a>
+                <div class="card">
+                    <div class="code">
+                        <div class="code-line">&#60;a class=<span class="code--value">"button"</span>&#62;CLASSIQUE&#60;/a&#62;</div>
+                        <div class="code-line">&#60;a class=<span class="code--value">"button button--white"</span>&#62;WHITE&#60;/a&#62;</div>
+                        <div class="code-line">&#60;a class=<span class="code--value">button button--hover"</span>&#62;CLASSIQUE HOVER&#60;/a&#62;</div>
                     </div>
-                    <div>
-                        <a class="button button--hover">
-                            CLASSIQUE HOVER
-                        </a>
-                        <a class="button button--white button--hover">
-                            WHITE HOVER
-                        </a>
-                    </div>
-                </section>
+                    <section id ="componentButton" class="componentDisplay componentDisplay--dark">
+                        <div class="buttonDisplay">
+                            <a class="button">
+                                CLASSIQUE
+                            </a>
+                            <a class="button button--white">
+                                WHITE
+                            </a>
+                        </div>
+                        <div class="buttonDisplay">
+                            <a class="button button--hover">
+                                CLASSIQUE HOVER
+                            </a>
+                            <a class="button button--white button--hover">
+                                WHITE HOVER
+                            </a>
+                        </div>
+                    </section>
+                </div>
             </div> <!-- end button-->
 
             <div class="contained">
                 <h2 class="componentTitle">- Secondary Title -</h2>
-                <section class="componentDisplay">
-                    <div class="secondaryTitle">
-                        <h2 >
-                            Titre
-                        </h2>
+                <div class="card">
+                    <div class="code">
+                        <div class="code-line">
+                            &#60;div class=<span class="code--value">"secondaryTitle"</span>&#62;&#60;h2>Titre moyen&#60;/h2&#62;&#60;/div&#62;
+                        </div>
                     </div>
-                    <div class="secondaryTitle">
-                        <h2 >
-                            Titre moyen
-                        </h2>
-                    </div>
-                    <div class="secondaryTitle">
-                        <h2 >
-                            Titre plutot long <br> 
-                            Titre plutot long  
-                        </h2>
-                    </div>
-                </section>
+                    <section class="componentDisplay">
+                        <div class="secondaryTitle">
+                            <h2>
+                                Titre
+                            </h2>
+                        </div>
+                        <div class="secondaryTitle">
+                            <h2>
+                                Titre moyen
+                            </h2>
+                        </div>
+                        <div class="secondaryTitle">
+                            <h2>
+                                Titre plutot long <br> 
+                                Titre plutot long  
+                            </h2>
+                        </div>
+                    </section>
+                </div>
             </div> <!-- end scondaryTitle-->
         
             <div class="contained">
                 <h2 class="componentTitle">- Dropdown menu -</h2>
-                <section id="dropdownMenu" class="componentDisplay">
-                    <div class="dropdown">
-                        <h2>Label:</h2>
-                        <button class="dropdownButton">veuillez sélectionner</button>
-                        <ul class="dropdownList" id="choice1-select">
-                            <li value="item 1">item 1</li>
-                            <li value="item 2">item 2</li>
-                            <li value="item 3">item 3</li>
-                        </ul>
+                <div class="card">
+                    <div class="code">
+                        <div class="code-line">
+                            <div class="code-line">&#60;div class=<span class="code--value">"dropdown"</span>&#62;</div>
+                            <div class="code-line">&emsp;&#60;h2&#62;Label:&#60;/h2&#62;</div>
+                            <div class="code-line">&emsp;&#60;button class=<span class="code--value">"dropdownButton"&#62;veuillez sélectionner&#60;/button&#62;</div>
+                            <div class="code-line">&emsp;&#60;ul class=<span class="code--value">"dropdownList"&#62;</div>
+                            <div class="code-line">&emsp;&emsp;&#60;li value=<span class="code--value">"item 1"</span>&#62;item 1&#60;/li&#62;</div>
+                            <div class="code-line">&emsp;&emsp;&#60;li value=<span class="code--value">"item 2"</span>&#62;item 2&#60;/li&#62;</div>
+                            <div class="code-line">&emsp;&emsp;&#60;li value=<span class="code--value">"item 3"</span>&#62;item 3&#60;/li&#62;</div>
+                            <div class="code-line">&emsp;&#60;/ul&#62;</div>
+                            <div class="code-line">&#60;/div&#62;</div>
+                        
+                        </div>
                     </div>
-                    <div class="dropdown">
-                        <h2>Label :</h2>
-                        <button class="dropdownButton toggle">veuillez sélectionner</button>
-                        <ul class="dropdownList " id="choice2-select">
-                            <li value="item 1">item 1</li>
-                            <li value="item 2" class="hover">item 2</li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="dropdownMenu" class="componentDisplay">
+                        <div class="dropdown">
+                            <h2>Label:</h2>
+                            <button class="dropdownButton">veuillez sélectionner</button>
+                            <ul class="dropdownList" id="choice1-select">
+                                <li value="item 1">item 1</li>
+                                <li value="item 2">item 2</li>
+                                <li value="item 3">item 3</li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <h2>Label :</h2>
+                            <button class="dropdownButton toggle">veuillez sélectionner</button>
+                            <ul class="dropdownList " id="choice2-select">
+                                <li value="item 1">item 1</li>
+                                <li value="item 2" class="hover">item 2</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
             </div> <!-- end dropdownMenu-->
  
             <div class="contained">
                 <h2 class="componentTitle">- Slider caption -</h2>
-                <section id="sliderCaption" class="componentDisplay">
-                    <div class="sliderCaption">
-                        <div class="secondaryTitle">
-                            <h2>Caption</h2>
-                        </div>
-                        <h3>- Country</h3>
+                <div class="card">
+                    <div class="code">
+                        <div class="code-line">&#60;div class=<span class="code--value">"sliderCaption"</span>&#62;</div>
+                        <div class="code-line">&emsp;&#60;div class=<span class="code--value">"secondaryTitle"</span>&#62;</div>
+                        <div class="code-line">&emsp;&emsp;&#60;h2&#62;Caption&#60;/h2&#62;</div>
+                        <div class="code-line">&emsp;&#60;/div&#62;</div>
+                        <div class="code-line">&emsp;&#60;h3&#62;Info&#60;/h3&#62;</div>
+                        <div class="code-line">&#60;/div&#62;</div>
                     </div>
-                </section>
+                    <section id="sliderCaption" class="componentDisplay">
+                        <div class="sliderCaption">
+                            <div class="secondaryTitle">
+                                <h2>Caption</h2>
+                            </div>
+                            <h3>- Info</h3>
+                        </div>
+                    </section>
+                </div>
             </div> <!-- end sliderCaption-->
 
             <div class="contained"> <!-- Start encadre -->

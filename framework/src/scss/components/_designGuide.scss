@@ -1,0 +1,115 @@
+$pastel-green:#8DDCC1;
+$pastel-red:#ffa9a9;
+$pastel-beige: #FFD1BA;
+$pastel-blue: #48acf0;
+$pastel-violet: #B08BCC;
+.design_guide {
+    ul {
+        list-style: disc;
+    }
+    .contained {
+        flex-direction: column;
+    }
+    .card {
+        .code {
+            padding-top: 1em;
+            border-radius: 0 2em 0 0;
+        }
+        .componentDisplay {
+            border-radius: 0 0 2em 2em;
+        }
+    }
+    .code {
+        width: 100%;
+        background: $white;
+        border-left: 7px $dark-grey solid;
+        padding: 0.5em 0;
+        color: $pastel-beige;
+        &--var {
+            color: $pastel-red;
+        }
+        &--value {
+            color: $pastel-green;
+        }
+        &--unit{
+            color: $pastel-blue;
+        }
+        &-line {
+            padding: 0 1em;
+        }
+        &-line:nth-child(2n) {
+            background-color: darken($color: $white, $amount: 3);
+        }
+    }
+    .componentDisplay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.3));
+        border-radius: 2em;
+        &--dark {
+            background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+        &--left {
+            align-items: flex-start;
+        }
+        &--big {
+            padding: 2rem 5rem;
+        }
+    }
+    .componentTitle {
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .secondaryTitle h1{
+        margin: 0;
+        font-weight: normal;
+        position: relative;
+        left: -35%;
+        text-transform: uppercase;
+    }
+    #colorPalette {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .colorDisplay{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1em;
+            background-color: $light-grey;
+            margin: 0 0.5em;
+            padding: 1em 0;
+            .color {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 100px;
+                text-align: center;
+                &--white {
+                    background-color: $white;
+                    color: invert($color: $white);
+                }
+                &--dark-grey {
+                    background-color: $dark-grey;
+                    color: invert($color: $dark-grey);
+                }
+                &--light-grey {
+                    background-color: $light-grey;
+                    color: invert($color: $light-grey);
+                }
+                &--black {
+                    background-color: $black;
+                    color: invert($color: $black);
+                }
+            }
+        }
+    }
+    .slider {
+        margin: 0 auto;
+    }
+}
