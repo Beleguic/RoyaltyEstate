@@ -49,12 +49,6 @@
         
         & .close {
             width: 30px;
-            margin-right: 10px;
-        }
-            
-        & img {
-            width: 20px;
-            margin-right: 10px;
         }
 
         & input {
@@ -82,6 +76,11 @@
             flex-direction: column;
             justify-content: center;
             width: 100%;
+            
+            & img {
+                width: 20px;
+                margin-right: 10px;
+            }
 
             & div {
                 display: flex;
