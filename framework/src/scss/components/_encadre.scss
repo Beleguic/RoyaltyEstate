@@ -1,0 +1,45 @@
+.sectionEncadre{
+
+	display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    vertical-align: 0;
+    align-items: center;
+    position: relative;
+    text-align: justify;
+
+    .parentHaut {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6%;  
+    }
+
+    .parentBas {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 6%;
+    }
+
+    .childBas {
+        position: relative;
+        top: 10px;
+         right: 110px;
+    }
+
+    .childHaut {
+         position: relative;
+        top: -10px;
+        left: 20px;
+    }
+
+    .divEncadreContent{
+
+        width: 88%;
+
+    }
+
+
+}
