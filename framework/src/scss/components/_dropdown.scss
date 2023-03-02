@@ -1,7 +1,7 @@
 section#dropdownMenu {
     padding : 0.5em 0.5em 1em 0.5em;
     align-items: flex-start;
-    width: 100%;
+    min-width: 50vw;
 }
 .dropdown {
     position: relative;
@@ -9,6 +9,7 @@ section#dropdownMenu {
     flex-direction: column;
     text-transform: uppercase;
     width: 100%;
+    min-width: 210px;
     h2 {
         font-weight: 200;
         font-size: 1.25rem;
@@ -82,7 +83,6 @@ section#dropdownMenu {
     section#dropdownMenu {
         flex-direction: row;
         justify-content: space-around;
-        margin: 0 4vw;
     }
     .dropdown {
        width: 30%;
