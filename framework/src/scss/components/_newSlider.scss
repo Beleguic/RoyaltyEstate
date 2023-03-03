@@ -1,17 +1,22 @@
 //slider carousel
 #carrousel{
-    width: 800px;
-    height: 400px;
+    width: auto;
+    height: auto;
     border:solid 2px white;
     position: relative;
     overflow: hidden;
 
-    #container{
-        width: 800px;
-        height: 400px;
+    &:hover{
+        .bouton{
+            opacity: 0.4;
+        }
+    }
 
+    #container{
+        width: 100%;
+        height: auto;
+        white-space: nowrap;
         .photo{
-            width: 800px;
             height: 400px;
             margin: 0;
             display: inline-block;
@@ -23,12 +28,13 @@
         position: absolute;
         width: 70px;
         cursor: pointer;
-        top: 150px;
+        top: 37%;
+        transform: translateY(-50%);
         margin: 10px;
+        opacity: 0;
     }
     #leftBtn{
         left: 0;
-        opacity: 0.4;
         transform: rotate(180deg); 
         transition: all 0.3s ease; 
         &:hover{
@@ -39,7 +45,6 @@
     }
     #rightBtn{
         right: 0;
-        opacity: 0.4;
         transform: rotate(0deg);
         transition: all 0.3s ease;
         &:hover{
@@ -47,5 +52,20 @@
             opacity: 1;
             transition: all 0.3s ease; 
         }
+    }
+}
+@media (max-width: $mobile) {
+    #carrousel {
+        .bouton{
+            display: none;
+        }
+    }
+    #container {
+        max-width: 80%;
+        max-height: 300px;
+        height: auto; 
+    }
+    .photo {
+        height: 150px;
     }
 }
