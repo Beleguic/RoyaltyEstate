@@ -51,7 +51,8 @@
             align-items: flex-start;
         }
         &--big {
-            padding: 2rem 5rem;
+            justify-content: space-around;
+            padding: 2rem 2rem;
         }
     }
     .componentTitle {

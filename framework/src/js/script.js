@@ -100,7 +100,7 @@ document.body.onload=function(){
     for(i = 1 ; i<= nbrImages ; i++){
         div = document.createElement("div");
         div.className = "photo";
-        div.style.backgroundImage = "url('./src/assets/images/chateau-" + i + ".jpg')";
+        div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
         container.appendChild(div);
     }
     displayBtnSlider();
