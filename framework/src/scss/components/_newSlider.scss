@@ -1,0 +1,51 @@
+//slider carousel
+#carrousel{
+    width: 800px;
+    height: 400px;
+    border:solid 2px white;
+    position: relative;
+    overflow: hidden;
+
+    #container{
+        width: 800px;
+        height: 400px;
+
+        .photo{
+            width: 800px;
+            height: 400px;
+            margin: 0;
+            display: inline-block;
+            background-size: cover;
+        }
+    }
+
+    .bouton{
+        position: absolute;
+        width: 70px;
+        cursor: pointer;
+        top: 150px;
+        margin: 10px;
+    }
+    #leftBtn{
+        left: 0;
+        opacity: 0.4;
+        transform: rotate(180deg); 
+        transition: all 0.3s ease; 
+        &:hover{
+            transform: rotate(180deg) scale(1.1);
+            opacity: 1;
+            transition: all 0.3s ease; 
+        }
+    }
+    #rightBtn{
+        right: 0;
+        opacity: 0.4;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+        &:hover{
+            transform: rotate(0deg) scale(1.1);
+            opacity: 1;
+            transition: all 0.3s ease; 
+        }
+    }
+}
