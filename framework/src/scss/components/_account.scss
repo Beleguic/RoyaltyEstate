@@ -19,6 +19,9 @@
         }
     }
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $white;
     bottom: 0;
     height: 85vh;
@@ -43,6 +46,12 @@
             margin-top: 4vh;
         } 
 
+        & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
         & div:nth-child(2) {
             margin: 4vh;
         }

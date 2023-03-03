@@ -1,5 +1,9 @@
 //slider carousel
 #carrousel{
+    @media (max-width: $mobile) {
+        display: none;
+    }
+
     width: 800px;
     height: 400px;
     border:solid 2px white;
