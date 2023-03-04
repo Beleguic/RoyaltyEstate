@@ -16,18 +16,25 @@
             background-size: 70px 70px;
             top: -1.5em;
             left: -1.5em;
-            background-image: url("../src/assets/images/croix-haut.svg");
+            background-image: url("../src/assets/images/svg/croix-haut.svg");
         }
 
         &--bas {
             bottom: -1.5em;
             right: -1.5em;
-            background-image: url("../src/assets/images/croix-bas.svg");
+            background-image: url("../src/assets/images/svg/croix-bas.svg");
         }
     }
     .divEncadreContent{
         position: relative;
         width: 85%;
         margin: auto;
+    }
+}
+@media (min-width: $mobile) {
+    .sectionEncadre {
+        .divEncadreContent {
+            width: 60%;
+        }
     }
 }
