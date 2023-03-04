@@ -1,4 +1,7 @@
 nav {
+    .nav {
+        z-index: 4;
+    }
     @media (max-width: $mobile) {
         .burger {
             bottom: 0;
@@ -21,7 +24,6 @@ nav {
 
         & > div {
             position: relative;
-            z-index: 4;
         }
     }
 

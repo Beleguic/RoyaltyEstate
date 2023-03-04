@@ -5,10 +5,11 @@ html {
     font-size: 16px;
 }
 body {
-    background-image: url("../src/assets/images/acceuil.jpg");
+    //background-image: url('../src/assets/images/acceuil.jpg');
+    background-color: $light-grey;
     background-repeat: no-repeat;
     background-position: 30%;
-    background-size: 100%;
+    background-size: auto 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -21,6 +22,9 @@ body {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+h1, h2 , h3 {
+    text-transform: uppercase;
 }
 
 a {
@@ -35,4 +39,23 @@ nav, ul {
     width: 100%;
     height: 400px;
     background: #d6d6d6;
+}
+main > section {
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    display: flex;
+}
+@media (max-width: $mobile) {
+    .container {
+        padding-bottom: 50px;
+    }
+    section:nth-child(1) .container {
+        padding-top: 45px;
+    }   
+}
+
+@media (min-width: $mobile) {
+
 }

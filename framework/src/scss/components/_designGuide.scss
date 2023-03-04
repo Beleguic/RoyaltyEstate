@@ -1,4 +1,5 @@
 .design_guide {
+    background-color: #cfbef5;
     ul {
         list-style: disc;
     }
@@ -68,6 +69,7 @@
         text-transform: uppercase;
     }
     #colorPalette {
+        padding: 2rem 0;
         flex-direction: row;
         flex-wrap: wrap;
         .colorDisplay{
@@ -107,5 +109,12 @@
     }
     .slider {
         margin: 0 auto;
+    }
+}
+@media (min-width: $mobile) {
+    .design_guide {
+        #colorPalette {
+            padding: 2rem 2rem;
+        }
     }
 }

@@ -33,9 +33,17 @@
         background-position: center;
         margin: 0 auto;
     }
+    &--big {
+        & > i {
+            width: 120px;
+            height: 120px;
+            background-size: 90px;
+            background-color: $dark-grey;
+        }
+    }
 }
 
-@media screen and (min-width: 800px) {
+@media (min-width: $mobile) {
     .logo {
         flex: none;
     }
