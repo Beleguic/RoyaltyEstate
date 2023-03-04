@@ -104,19 +104,21 @@ document.body.onload=function(){
     initialX = null;
     initialY = null;
 
+    //Pour adapter la taille du carousel il faut jouer les variable en dessous plus particulierement (widthCarrousel , heightImages(ratio) ) et ne pas oublier d'adapter la fonction onResize() tout en bas 
     //calculer la bonne largeur pour le carrousel 
     largeurEcran = window.innerWidth;
-    widthCarrousel = (largeurEcran * (90/100));
+    widthCarrousel = (largeurEcran * (60/100)); //--> defini la largeur final du carousel en fonction de la largeur de l'ecran ici on prend 60% de la taille de l'ecran 
 
-    containerWidth = (widthCarrousel * nbrImages);
-    heightImages = (containerWidth/nbrImages) * 0.6
+    containerWidth = (widthCarrousel * nbrImages); //defini la largeur total du container, celui ci contiens les x images en inline block et donc doit prendre une largeur de x fois la largeur du carrousel 
+    widthImages = containerWidth/nbrImages; // defini la largeur d'une image
+    heightImages = widthImages * 0.6 // defini la hauteur des images puis du container et du carousel en cascade car on defini pas la hauteur carousel et container ; ici on prend la largeur d'une image puis on apllique un ratio
     container.style.width = containerWidth + "px";
     carrousel.style.maxWidth = containerWidth/nbrImages + "px";
     //
     for(i = 1 ; i<= nbrImages ; i++){
         div = document.createElement("div");
         div.className = "photo";
-        div.style.width = containerWidth/nbrImages + "px";
+        div.style.width = widthImages + "px";
         div.style.height = heightImages+"px";
         div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
         container.appendChild(div);
@@ -218,17 +220,18 @@ function endTouch(e) {
 window.addEventListener('resize', onResize);
 function onResize() {
     largeurEcran = window.innerWidth;
-    widthCarrousel = (largeurEcran * (90/100));
+    widthCarrousel = (largeurEcran * (60/100));
 
     containerWidth = (widthCarrousel * nbrImages);
-    heightImages = (containerWidth/nbrImages) * 0.6
+    heightImages = (containerWidth/nbrImages) * 0.6;
+    widthImages = containerWidth/nbrImages;
     container.style.width = containerWidth + "px";
-    carrousel.style.maxWidth = containerWidth/nbrImages + "px";
+    carrousel.style.maxWidth = widthImages + "px";
 
     var photos = document.querySelectorAll('.photo');
 
     for (var i = 0; i < photos.length; i++) {
-    photos[i].style.width = containerWidth/nbrImages + "px"; 
+    photos[i].style.width = widthImages + "px"; 
     photos[i].style.height = heightImages+"px";
     }
 }
