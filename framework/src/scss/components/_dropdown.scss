@@ -2,9 +2,15 @@ section#dropdownMenu {
     padding : 0.5em 0.5em 1em 0.5em;
     align-items: flex-start;
     min-width: 50vw;
+    z-index: 2;
+    top: 5%;
+    position: fixed;
+    
+    &.design-guide-dropdown {
+        position: relative;
+    }
 }
 .dropdown {
-    position: relative;
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
