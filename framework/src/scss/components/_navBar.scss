@@ -1,20 +1,30 @@
 nav {
+    .nav {
+        z-index: 4;
+    }
     @media (max-width: $mobile) {
         .burger {
+            z-index: 4;
             bottom: 0;
             position: fixed;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             width: 100%;
+            height: 50px;
             justify-content: space-between;
             backdrop-filter: blur(3px);
             background-color: rgba($color: $white, $alpha: 0.2);
-            box-shadow: 0 -1px 10px $grey;
+            border-top: 1px solid $black;
+            // box-shadow: 0 -1px 10px $grey;
         }
 
         & .nav {
             display: none;
+        }
+
+        & > div {
+            position: relative;
         }
     }
 

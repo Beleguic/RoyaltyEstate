@@ -7,4 +7,44 @@
     font-weight: 300;
     color: $white;
     font-size: 1.4rem;
+    white-space: nowrap;
+    flex: auto;
+    span {
+        flex: 1;
+        &:nth-child(1){
+            text-align: right;
+        }&:nth-child(2){
+            text-align: left;
+        }
+    }
+}
+.logo-round {
+    display: block;
+    width: 100%;
+    & > i {
+        display: block;
+        background-color: $black;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        background-image: url('../src/assets/images/svg/modele-logo-chateau.svg');
+        background-repeat: no-repeat;
+        background-size: 50px;
+        background-position: center;
+        margin: 0 auto;
+    }
+    &--big {
+        & > i {
+            width: 120px;
+            height: 120px;
+            background-size: 90px;
+            background-color: $dark-grey;
+        }
+    }
+}
+
+@media (min-width: $mobile) {
+    .logo {
+        flex: none;
+    }
 }

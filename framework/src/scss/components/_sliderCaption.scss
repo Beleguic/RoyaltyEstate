@@ -1,6 +1,13 @@
+section#sliderCaption {
+    position: relative;
+    height: 8em;
+    width: 100%;
+    overflow: hidden;
+}
 .sliderCaption {
     position: absolute;
     bottom: 0;
+    left: 0;
     align-self: start;
     width: 100%;
     padding: 1.25em;
@@ -8,7 +15,7 @@
     color: $white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
     
     .secondaryTitle {
         width: fit-content;
@@ -24,7 +31,9 @@
         font-size: 1.25rem;
     }
 }
-section#sliderCaption {
-    position: relative;
-    height: 8em;
+@media screen  and (min-width: 800px){
+    section#sliderCaption {
+        width: 500px;
+        margin: 0 auto;
+    }
 }

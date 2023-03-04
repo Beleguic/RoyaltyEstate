@@ -1,5 +1,5 @@
 .account {
-    z-index: 200;
+    z-index: 3;
 
     @media (max-width: $mobile) {
         bottom: -100vh;
@@ -19,6 +19,9 @@
         }
     }
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $white;
     bottom: 0;
     height: 85vh;
@@ -43,18 +46,18 @@
             margin-top: 4vh;
         } 
 
+        & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
         & div:nth-child(2) {
             margin: 4vh;
         }
         
         & .close {
             width: 30px;
-            margin-right: 10px;
-        }
-            
-        & img {
-            width: 20px;
-            margin-right: 10px;
         }
 
         & input {
@@ -82,6 +85,11 @@
             flex-direction: column;
             justify-content: center;
             width: 100%;
+            
+            & img {
+                width: 20px;
+                margin-right: 10px;
+            }
 
             & div {
                 display: flex;
