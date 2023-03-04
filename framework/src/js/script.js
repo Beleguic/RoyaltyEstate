@@ -53,7 +53,12 @@ $(document).ready(function(){
         document.getElementById('login').style.left = "-100vw";
         document.getElementById('inscription').style.left = "0";
     })
-
+    $('#btnConnect').on('click',function(){
+        document.getElementById('Connect-ConfirmedText').style.visibility = "visible";
+    })
+    $('#btnInscr').on('click',function(){
+        document.getElementById('Inscr-ConfirmedText').style.visibility = "visible";
+    })
     //navbar pc
     $('#login-nav').on('click',function(){
         let account = document.getElementById('account')
@@ -109,7 +114,7 @@ document.body.onload=function(){
         largeurSlider = 100;
     }
     
-    //variable for swipe avec le slider (mobile)
+    //variable for swipe avec le slider 
     initialX = null;
     initialY = null;
 
@@ -134,42 +139,40 @@ document.body.onload=function(){
     }
     displayBtnSlider();
 }
-//functions
-    //functions for slider
-    function displayBtnSlider(){
-        if(position == -nbrImages+1)
-        {
-            rightBtn.style.visibility = "hidden";
-        }
-        else{
-            rightBtn.style.visibility = "visible";
-        }
-        if(position == 0)
-        {
-            leftBtn.style.visibility = "hidden";
-        }
-        else{
-            leftBtn.style.visibility = "visible";
-        }
+//functions for slider
+function displayBtnSlider(){
+    if(position == -nbrImages+1)
+    {
+        rightBtn.style.visibility = "hidden";
     }
-    function moveLeft() {
-        if (position > -nbrImages + 1) {
-        position--;
-        }
-        container.style.transform = "translate(" + position * widthCarrousel + "px)";
-        container.style.transition = "all 0.5s ease";
-        displayBtnSlider();
+    else{
+        rightBtn.style.visibility = "visible";
     }
-    
-    function moveRight() {
-        if (position < 0) {
-        position++;
-        }
-        container.style.transform = "translate(" + position * widthCarrousel + "px)";
-        container.style.transition = "all 0.5s ease";
-        displayBtnSlider();
+    if(position == 0)
+    {
+        leftBtn.style.visibility = "hidden";
     }
-    //
+    else{
+        leftBtn.style.visibility = "visible";
+    }
+}
+function moveLeft() {
+    if (position > -nbrImages + 1) {
+      position--;
+    }
+    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
+}
+  
+function moveRight() {
+    if (position < 0) {
+      position++;
+    }
+    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
+}
 
     //swipe for mobile :
     function startTouch(e) {
@@ -250,9 +253,9 @@ leftBtn.onclick = function(){
 }
 
     //swipe slider (mobile)
-    container.addEventListener("touchstart", startTouch);
-    container.addEventListener("touchmove", moveTouch);
-    container.addEventListener("touchend", endTouch);
+container.addEventListener("touchstart", startTouch);
+container.addEventListener("touchmove", moveTouch);
+container.addEventListener("touchend", endTouch);
     //
 //
 

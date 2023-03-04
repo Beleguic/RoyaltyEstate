@@ -80,6 +80,14 @@
             margin-bottom: 4vh;
         }
 
+        & #Connect-ConfirmedText , #Inscr-ConfirmedText{
+            display: block;
+            visibility: hidden;
+            margin-bottom: -8%;
+            text-align: center;
+            color: green;
+        }
+
         & form {
             display: flex;
             flex-direction: column;
