@@ -51,9 +51,12 @@
                             <a id="forgot-password" href="#">Mot de passe oublié ?</a>
                         </div>
                         <div>
-                            <a class="button">
+                            <a class="button" id="btnConnect">
                                 SE CONNECTER
                             </a>
+                        </div>
+                        <div id="Connect-ConfirmedText">
+                            <p>vous êtes bien connecté.</p>
                         </div>
                         <div class="delimiter">
                             <span></span>
@@ -94,9 +97,12 @@
                             <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
                         </div>
                         <div>
-                            <a class="button">
+                            <a class="button" id="btnInscr">
                                 S'INSCRIRE
                             </a>
+                        </div>
+                        <div id="Inscr-ConfirmedText" >
+                            <p>vous êtes inscrit</p>
                         </div>
                         <div class="delimiter">
                             <span></span>
@@ -181,7 +187,7 @@
             </a>
         </section>
         <div class="container-scroll design_guide">
-            <div class="contained">
+            <div class="contained imageNosBien" style="background-image: url(./src/assets/images/chateaux/chateau-1.jpg);">
                 <section id="dropdownMenu">
                     <div class="dropdown">
                         <h2>Époque:</h2>
@@ -210,40 +216,39 @@
                     <div class="dropdown">
                         <h2>Classement:</h2>
                         <button class="dropdownButton">veuillez sélectionner</button>
-                        <ul class="dropdownList" id="period-select">
+                        <ul class="dropdownList" id="classement-select">
                             <li value="mh">Monument historique</li>
                         </ul>
                     </div>
                 </section>
-                <section id="sectionCarousel">
-                    <div id="carrousel">
-                        <div id="container">
+                    <section class="sliderCaptionNosBiens sliderCaptionSection">
+                        <div class="sliderCaption">
+                            <div class="secondaryTitle">
+                                <h2><a href="#">Chateau 1</a></h2>
+                            </div>
+                            <h3>- Country</h3>
                         </div>
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
-                    </div>
-                </section>
+                    </section>
             </div>
-            <div class="contained">
-                
-                <section id="sectionCarousel">
-                    <div id="carrousel">
-                        <div id="container">
+            <div class="contained imageNosBien" style="background-image: url(./src/assets/images/chateaux/chateau-2.jpg);">
+                    <section class="sliderCaptionNosBiens sliderCaptionSection">
+                        <div class="sliderCaption">
+                            <div class="secondaryTitle">
+                                <h2><a href="#">Chateau 2</a></h2>
+                            </div>
+                            <h3>- Country</h3>
                         </div>
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
-                    </div>
-                </section>
+                    </section>
             </div>
-            <div class="contained">
-                <section id="sectionCarousel">
-                    <div id="carrousel">
-                        <div id="container">
+            <div class="contained imageNosBien" style="background-image: url(./src/assets/images/chateaux/chateau-3.jpg);">
+                    <section class="sliderCaptionNosBiens sliderCaptionSection">
+                        <div class="sliderCaption">
+                            <div class="secondaryTitle">
+                                <h2><a href="#">Chateau 3</a></h2>
+                            </div>
+                            <h3>- Country</h3>
                         </div>
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
-                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
-                    </div>
-                </section>
+                    </section>
             </div>
         </div>
         <nav>
@@ -325,5 +330,9 @@
             </div>
         </footer>
     </body>
+    <script type="text/javascript"> 
+        /* use for define the width of the slider specific for this page  */
+        window.LargeurSliderEnPourcentage = 100;
+    </script>
     <script src="src/js/script.js" type="text/javascript"></script>
 </html>
