@@ -115,6 +115,8 @@ document.body.onload=function(){
     for(i = 1 ; i<= nbrImages ; i++){
         div = document.createElement("div");
         div.className = "photo";
+        div.style.width = containerWidth/nbrImages + "px";
+        div.style.height = (containerWidth/nbrImages) * 1,865 + "px";
         div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
         container.appendChild(div);
     }
@@ -225,5 +227,6 @@ function onResize() {
 
     for (var i = 0; i < photos.length; i++) {
     photos[i].style.width = containerWidth/nbrImages + "px"; 
+    photos[i].style.height = (containerWidth/nbrImages) * 1,865 + "px";
     }
 }
