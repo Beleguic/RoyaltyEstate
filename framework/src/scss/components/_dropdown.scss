@@ -81,6 +81,7 @@ section#dropdownMenu {
 }
 @media (min-width: $mobile) {
     section#dropdownMenu {
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
