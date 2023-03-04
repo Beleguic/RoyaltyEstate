@@ -127,7 +127,6 @@ section.banner {
         h1 {
             max-width: 530px;
             width: 45vw;
-            margin-top: 20vh;
             line-height: 130%;
             & >span:nth-child(1){
                 span {
@@ -139,9 +138,6 @@ section.banner {
                     margin-left: -5vw;
                 }
             }
-        }
-        .button.decouvrir {
-            margin-bottom: 25vh;
         }
     }
     .about-us {

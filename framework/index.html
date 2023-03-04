@@ -18,6 +18,169 @@
             </span>
         </div>
     </header>
+    <section class="account" id="account">
+        <div>
+            <section id="login">
+                <div>
+                    <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+                </div>
+                <div class="secondaryTitle">
+                    <h2 >
+                        Connectez-vous
+                    </h2>
+                </div>
+                <form action="/traitement" method="post">
+                    <div class="input">
+                        <img src="./src/assets/images/svg/account.svg"/>
+                        <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
+                    </div>
+                    <div class="input">
+                        <img src="./src/assets/images/svg/lock.svg"/>
+                        <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="stay_connected" name="user_stay_connected">
+                        <span>Rester connecté(e)</span>
+                    </div>
+                    <div>
+                        <a id="forgot-password" href="#">Mot de passe oublié ?</a>
+                    </div>
+                    <div>
+                        <a class="button" id="btnConnect">
+                            SE CONNECTER
+                        </a>
+                    </div>
+                    <div id="Connect-ConfirmedText">
+                        <p>vous êtes bien connecté.</p>
+                    </div>
+                    <div class="delimiter">
+                        <span></span>
+                        ou
+                        <span></span>
+                    </div>
+                    <div>
+                        <a class="button" id="inscription-link">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+                </form>
+            </section>
+            <section id="inscription">
+                <div>
+                    <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+                </div>
+                <div class="secondaryTitle">
+                    <h2 >
+                        Inscrivez-vous
+                    </h2>
+                </div>
+                <form action="/traitement" method="post">
+                    <div class="input">
+                        <img src="./src/assets/images/svg/account.svg"/>
+                        <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
+                    </div>
+                    <div class="input">
+                        <img src="./src/assets/images/svg/account.svg"/>
+                        <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
+                    </div>
+                    <div class="input">
+                        <img src="./src/assets/images/svg/lock.svg"/>
+                        <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
+                    </div>
+                    <div class="input">
+                        <img src="./src/assets/images/svg/lock.svg"/>
+                        <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
+                    </div>
+                    <div>
+                        <a class="button" id="btnInscr">
+                            S'INSCRIRE
+                        </a>
+                    </div>
+                    <div id="Inscr-ConfirmedText" >
+                        <p>vous êtes inscrit</p>
+                    </div>
+                    <div class="delimiter">
+                        <span></span>
+                        ou
+                        <span></span>
+                    </div>
+                    <div>
+                        <a class="button"  id="login-link">
+                            SE CONNECTER
+                        </a>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </section>
+    <section class="burger-menu" id="burger-menu-id">
+        <div>
+            <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+        </div>
+        <div class="secondaryTitle">
+            <h2 >
+                Menu
+            </h2>
+        </div>
+        <a href="#">
+            <div>
+                Acceuil
+            </div>
+            <div>
+                >
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                Nos biens
+            </div>
+            <div>
+                >
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                Contact
+            </div>
+            <div>
+                >
+            </div>
+        </a>
+    </section>
+    <section class="search" id="search-id">
+        <div>
+            <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Que recherchez-vous ?">
+        </div>
+        <div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Suggestions
+                </h2>
+            </div>
+        </div>
+        <a href="#">
+            <div>
+                CHATEAUX EN FRANCE
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                CHATEAUX EN SUISSE
+            </div>
+        <a href="#">
+            <div>
+                CHATEAUX HISTORIQUE
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                CHATEAUX MODERNE
+            </div>
+        </a>
+    </section>
     <main>
         <section class="banner">
             <div class="container">
@@ -120,22 +283,22 @@
         <div>
             <div class="nav">
                 <div>
-                    <a href="#">Nos biens</a>
+                    Nos biens
                 </div>
                 <div>
-                    <a href="#">Contact</a>
+                    Contact
                 </div>
                 <div>
-                    <a href="#">Recherche</a>
+                    Recherche
                 </div>
                 <div id="login-nav">
-                    <a href="#">Connexion</a>
+                    Connexion
                 </div>
             </div>
             <div class="burger">
-                <img id="burger-menu-button-burger" src="./src/assets/images/svg/menu-burger.svg">
-                <img src="./src/assets/images/svg/search.svg">
-                <img id="account-button-burger" src="./src/assets/images/svg/account.svg">
+                <img id="burger-menu-button-burger" src="./src/assets/images/svg/menu-burger.svg"/>
+                <img id="search-button-burger" src="./src/assets/images/svg/search.svg"/>
+                <img id="account-button-burger" src="./src/assets/images/svg/account.svg"/>
             </div>
         </div>
     </nav>
