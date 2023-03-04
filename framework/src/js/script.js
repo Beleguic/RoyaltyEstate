@@ -109,6 +109,7 @@ document.body.onload=function(){
     widthCarrousel = (largeurEcran * (90/100));
 
     containerWidth = (widthCarrousel * nbrImages);
+    heightImages = (containerWidth/nbrImages) * 0.6
     container.style.width = containerWidth + "px";
     carrousel.style.maxWidth = containerWidth/nbrImages + "px";
     //
@@ -116,7 +117,7 @@ document.body.onload=function(){
         div = document.createElement("div");
         div.className = "photo";
         div.style.width = containerWidth/nbrImages + "px";
-        div.style.height = (containerWidth/nbrImages) * 1,865 + "px";
+        div.style.height = heightImages+"px";
         div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
         container.appendChild(div);
     }
@@ -220,6 +221,7 @@ function onResize() {
     widthCarrousel = (largeurEcran * (90/100));
 
     containerWidth = (widthCarrousel * nbrImages);
+    heightImages = (containerWidth/nbrImages) * 0.6
     container.style.width = containerWidth + "px";
     carrousel.style.maxWidth = containerWidth/nbrImages + "px";
 
@@ -227,6 +229,6 @@ function onResize() {
 
     for (var i = 0; i < photos.length; i++) {
     photos[i].style.width = containerWidth/nbrImages + "px"; 
-    photos[i].style.height = (containerWidth/nbrImages) * 1,865 + "px";
+    photos[i].style.height = heightImages+"px";
     }
 }
