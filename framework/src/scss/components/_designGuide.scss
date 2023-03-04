@@ -68,6 +68,16 @@
         left: -35%;
         text-transform: uppercase;
     }
+    #dropdownMenu {    
+        &.design-guide-dropdown {
+            position: relative;
+            top: 0;
+            .dropdownButton {
+                white-space: nowrap;
+                font-size: 1rem;
+            }
+        }
+    }
     #colorPalette {
         padding: 2rem 0;
         flex-direction: row;
@@ -115,6 +125,14 @@
     .design_guide {
         #colorPalette {
             padding: 2rem 2rem;
+        }
+        #encadreCard {
+            width: 80%;
+        }
+        #dropdownMenu { 
+            .dropdown {
+                width: 40%;
+            }
         }
     }
 }

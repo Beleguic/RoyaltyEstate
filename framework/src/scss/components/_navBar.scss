@@ -1,10 +1,10 @@
 nav {
     .nav {
-        z-index: 4;
+        z-index: 10;
     }
     @media (max-width: $mobile) {
         .burger {
-            z-index: 4;
+            z-index: 10;
             bottom: 0;
             position: fixed;
             display: flex;

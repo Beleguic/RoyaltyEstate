@@ -64,7 +64,6 @@ section.banner {
 .about-us {
     height: auto;
     .container {
-        padding: 2em 0;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -72,9 +71,51 @@ section.banner {
 
 }
 .highlight {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     #carrousel {
         padding: 1em 0;
+    }
+}
+.contact {
+    text-align: center;
+    .secondaryTitle {
+        margin-bottom: 2rem;
+    }
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        height: 100%;
+    }
+    &-infos {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon {
+        width: 36px;
+        height: 36px;
+        display: block;
+        margin: 0 auto 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &--map {
+            background-image: url("../src/assets/images/svg/map-pin.svg");
+        }
+        &--calendar{
+            background-image: url("../src/assets/images/svg/calendrier.svg");
+        }
+        &--phone{
+            background-image: url("../src/assets/images/svg/phone.svg");
+        }
+        &--email{
+            background-image: url("../src/assets/images/svg/email.svg");
+        }
     }
 }
 @media (max-width: $mobile) {
@@ -110,6 +151,18 @@ section.banner {
             flex: 1;
             article {
                 flex: 1;
+            }
+        }
+    }
+    .contact {
+        &-infos{
+            flex-direction: row;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            div {
+                flex-shrink: 0;
+                width: 40vw;
             }
         }
     }
