@@ -1,4 +1,6 @@
 section#dropdownMenu {
+    display: flex;
+    flex-direction: column;
     padding : 0.5em 0.5em 1em 0.5em;
     align-items: flex-start;
     width: 100%;
@@ -23,8 +25,7 @@ section#dropdownMenu {
         background: $white;
         border: 1px solid currentColor;
         border-radius: 20em;
-        padding: 1em;
-        height: 4rem;
+        padding: 0.5em 1em;
         text-align: left;
         &::after {
             content: "";

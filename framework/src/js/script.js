@@ -29,9 +29,16 @@ $(document).ready(function(){
         }
     })
     //filter menu
-    $('.dropdownMenuButton').on('click', function() {
-        $(this).toggleClass('toggle');
-    })
+    document.body.addEventListener('click', function(e) {
+        if(!e.target.classList.contains("dropdownButton")) {
+            console.log("haha");
+            console.log(e.target);
+            $('.dropdownButton').removeClass("toggle");
+        }
+        if(e.target.classList.contains("dropdownButton")) {
+            toggleDropdownList(e.target);
+        }
+    });
 })
 
 //google maps 
@@ -53,15 +60,55 @@ function initMap() {
   });
 }
 
-// slider
-var slides=document.querySelector(".slider-items").children;
-var nextSlide=document.querySelector(".right-slide");
-var prevSlide=document.querySelector(".left-slide");
-var totalSlides=slides.length;
-var index=0;
+// dropdown
+function toggleDropdownList (button) {
+    document.querySelectorAll(".dropdownList").forEach(function(ul) {
+        console.log("sibling");
+        console.log(button.nextElementSibling);
+        if(ul.id == button.nextElementSibling.id) {
+            console.log("bingo")
+            console.log(ul)
+            button.classList.toggle("toggle");
+        }
+        else {
+            console.log("bozo")
+            console.log(ul.id)
+            ul.previousElementSibling.classList.remove("toggle");
+        }
+    });
+}
 
-nextSlide.onclick=function () {
-     next("next");
+//New slider
+
+document.body.onload=function(){
+    nbrImages = 3;
+    position = 0;
+    carrousel = document.getElementById("carrousel");
+    container = document.getElementById("container");
+    leftBtn = document.getElementById("leftBtn");
+    rightBtn = document.getElementById("rightBtn");
+    //swipe avec le slider 
+    initialX = null;
+    initialY = null;
+
+    //calculer la bonne largeur pour le carrousel 
+    largeurEcran = window.innerWidth;
+    widthCarrousel = (largeurEcran * (90/100));
+
+    containerWidth = (widthCarrousel * nbrImages);
+    heightImages = (containerWidth/nbrImages) * 0.6
+    container.style.width = containerWidth + "px";
+    carrousel.style.maxWidth = containerWidth/nbrImages + "px";
+    //
+    for(i = 1 ; i<= nbrImages ; i++){
+        div = document.createElement("div");
+        div.className = "photo";
+        div.style.width = containerWidth/nbrImages + "px";
+        div.style.height = heightImages+"px";
+        div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
+        container.appendChild(div);
+    }
+    displayBtnSlider();
 }
 prevSlide.onclick=function () {
      next("prev");
