@@ -1,8 +1,3 @@
-$pastel-green:#8DDCC1;
-$pastel-red:#ffa9a9;
-$pastel-beige: #FFD1BA;
-$pastel-blue: #48acf0;
-$pastel-violet: #B08BCC;
 .design_guide {
     ul {
         list-style: disc;
@@ -56,7 +51,8 @@ $pastel-violet: #B08BCC;
             align-items: flex-start;
         }
         &--big {
-            padding: 2rem 5rem;
+            justify-content: space-around;
+            padding: 2rem 2rem;
         }
     }
     .componentTitle {

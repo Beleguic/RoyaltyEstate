@@ -2,15 +2,13 @@ $(document).ready(function(){
     //navbar mobile
     let account = document.getElementById('account')
     let burgerMenu = document.getElementById('burger-menu-id')
+    let search = document.getElementById('search-id')
 
     //close all
     $('.close').on('click',function(){
-        if (burgerMenu.style.bottom === "0px"){
-            burgerMenu.style.bottom = "-100vh";
-        }
-        if (account.style.bottom === "0px"){
-            account.style.bottom = "-100vh";
-        }
+        burgerMenu.style.bottom = "-100vh";
+        account.style.bottom = "-100vh";
+        search.style.bottom = "-100vh";
     })
 
     //burger menu
@@ -19,6 +17,18 @@ $(document).ready(function(){
             burgerMenu.style.bottom = "-100vh";
         } else {
             burgerMenu.style.bottom = "0";
+            account.style.bottom = "-100vh";
+            search.style.bottom = "-100vh";
+        }
+    })
+
+    //search 
+    $('#search-button-burger').on('click',function(){
+        if (search.style.bottom === "0px"){
+            search.style.bottom = "-100vh";
+        } else {
+            search.style.bottom = "0";
+            burgerMenu.style.bottom = "-100vh";
             account.style.bottom = "-100vh";
         }
     })
@@ -30,6 +40,7 @@ $(document).ready(function(){
         } else {
             account.style.bottom = "0";
             burgerMenu.style.bottom = "-100vh";
+            search.style.bottom = "-100vh";
         }
     })
     document.getElementById('inscription').style.left = "100vw";
@@ -104,8 +115,7 @@ document.body.onload=function(){
     for(i = 1 ; i<= nbrImages ; i++){
         div = document.createElement("div");
         div.className = "photo";
-        div.style.width = containerWidth/nbrImages + "px";
-        div.style.backgroundImage = "url('./src/assets/images/chateau-" + i + ".jpg')";
+        div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
         container.appendChild(div);
     }
     displayBtnSlider();
