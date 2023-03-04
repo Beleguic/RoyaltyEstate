@@ -53,7 +53,12 @@ $(document).ready(function(){
         document.getElementById('login').style.left = "-100vw";
         document.getElementById('inscription').style.left = "0";
     })
-
+    $('#btnConnect').on('click',function(){
+        document.getElementById('Connect-ConfirmedText').style.visibility = "visible";
+    })
+    $('#btnInscr').on('click',function(){
+        document.getElementById('Inscr-ConfirmedText').style.visibility = "visible";
+    })
     //navbar pc
     $('#login-nav').on('click',function(){
         let account = document.getElementById('account')
@@ -122,14 +127,23 @@ document.body.onload=function(){
     container = document.getElementById("container");
     leftBtn = document.getElementById("leftBtn");
     rightBtn = document.getElementById("rightBtn");
-    //swipe avec le slider 
+
+    if (typeof window.LargeurSliderEnPourcentage !== "undefined") {
+        //la variable existe
+        largeurSlider = window.LargeurSliderEnPourcentage;
+    } else {
+        // La variable n'existe pas
+        largeurSlider = 100;
+    }
+    
+    //variable for swipe avec le slider 
     initialX = null;
     initialY = null;
 
-    //Pour adapter la taille du carousel il faut jouer les variable en dessous plus particulierement (widthCarrousel , heightImages(ratio) ) et ne pas oublier d'adapter la fonction onResize() tout en bas 
+    //Pour adapter la taille du carousel il faut jouer les variable en dessous plus particulierement (widthCarrousel pour la largeur , heightImages(ratio) pour la hauteur ) et ne pas oublier d'adapter la fonction onResize() tout en bas 
     //calculer la bonne largeur pour le carrousel 
     largeurEcran = window.innerWidth;
-    widthCarrousel = (largeurEcran * (60/100)); //--> defini la largeur final du carousel en fonction de la largeur de l'ecran ici on prend 60% de la taille de l'ecran 
+    widthCarrousel = (largeurEcran * (largeurSlider/100)); //--> defini la largeur final du carousel en fonction de la largeur de l'ecran ici on prend 60% de la taille de l'ecran 
 
     containerWidth = (widthCarrousel * nbrImages); //defini la largeur total du container, celui ci contiens les x images en inline block et donc doit prendre une largeur de x fois la largeur du carrousel 
     widthImages = containerWidth/nbrImages; // defini la largeur d'une image
@@ -147,14 +161,7 @@ document.body.onload=function(){
     }
     displayBtnSlider();
 }
-rightBtn.onclick = function(){
-    moveLeft();
-}
-
-leftBtn.onclick = function(){
-    moveRight();
-}
-
+//functions for slider
 function displayBtnSlider(){
     if(position == -nbrImages+1)
     {
@@ -188,72 +195,90 @@ function moveRight() {
     container.style.transition = "all 0.5s ease";
     displayBtnSlider();
 }
-//swipe slider (mobile)
+
+    //swipe for mobile :
+    function startTouch(e) {
+        initialX = e.touches[0].clientX;
+        initialY = e.touches[0].clientY;
+    }
+        
+    function moveTouch(e) {
+        if (initialX === null) {
+            return;
+        }
+
+        if (initialY === null) {
+            return;
+        }
+
+        let currentX = e.touches[0].clientX;
+        let currentY = e.touches[0].clientY;
+
+        let diffX = initialX - currentX;
+        let diffY = initialY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            // le déplacement est horizontal
+            if (diffX > 0) {
+            // swipe gauche
+            moveLeft();
+            } else {
+            // swipe droit
+            moveRight();
+            }
+        } else {
+            // le déplacement est vertical, ne fait rien
+            return;
+        }
+
+        initialX = null;
+        initialY = null;
+
+        e.preventDefault();
+    }
+        
+    function endTouch(e) {
+        initialX = null;
+        initialY = null;
+    }
+    //
+
+    //resize the carousel 
+    window.addEventListener('resize', onResize);
+    function onResize() {
+        largeurEcran = window.innerWidth;
+        widthCarrousel = (largeurEcran * (100/100));
+
+        containerWidth = (widthCarrousel * nbrImages);
+        heightImages = (containerWidth/nbrImages) * 0.6;
+        widthImages = containerWidth/nbrImages;
+        container.style.width = containerWidth + "px";
+        carrousel.style.maxWidth = widthImages + "px";
+
+        var photos = document.querySelectorAll('.photo');
+
+        for (var i = 0; i < photos.length; i++) {
+        photos[i].style.width = widthImages + "px"; 
+        photos[i].style.height = heightImages+"px";
+        }
+    }
+    //
+//
+
+//event for slider 
+rightBtn.onclick = function(){
+    moveLeft();
+}
+
+leftBtn.onclick = function(){
+    moveRight();
+}
+
+    //swipe slider (mobile)
 container.addEventListener("touchstart", startTouch);
 container.addEventListener("touchmove", moveTouch);
 container.addEventListener("touchend", endTouch);
-
-function startTouch(e) {
-    initialX = e.touches[0].clientX;
-    initialY = e.touches[0].clientY;
-}
-  
-function moveTouch(e) {
-    if (initialX === null) {
-        return;
-    }
-
-    if (initialY === null) {
-        return;
-    }
-
-    let currentX = e.touches[0].clientX;
-    let currentY = e.touches[0].clientY;
-
-    let diffX = initialX - currentX;
-    let diffY = initialY - currentY;
-
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-        // le déplacement est horizontal
-        if (diffX > 0) {
-        // swipe gauche
-        moveLeft();
-        } else {
-        // swipe droit
-        moveRight();
-        }
-    } else {
-        // le déplacement est vertical, ne fait rien
-        return;
-    }
-
-    initialX = null;
-    initialY = null;
-
-    e.preventDefault();
-}
-  
-function endTouch(e) {
-    initialX = null;
-    initialY = null;
-}
+    //
 //
-//resize the carousel 
-window.addEventListener('resize', onResize);
-function onResize() {
-    largeurEcran = window.innerWidth;
-    widthCarrousel = (largeurEcran * (60/100));
 
-    containerWidth = (widthCarrousel * nbrImages);
-    heightImages = (containerWidth/nbrImages) * 0.6;
-    widthImages = containerWidth/nbrImages;
-    container.style.width = containerWidth + "px";
-    carrousel.style.maxWidth = widthImages + "px";
 
-    var photos = document.querySelectorAll('.photo');
-
-    for (var i = 0; i < photos.length; i++) {
-    photos[i].style.width = widthImages + "px"; 
-    photos[i].style.height = heightImages+"px";
-    }
-}
