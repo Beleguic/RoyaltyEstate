@@ -35,9 +35,9 @@
     }
     &--big {
         & > i {
-            width: 120px;
-            height: 120px;
-            background-size: 90px;
+            width: 90px;
+            height: 90px;
+            background-size: 70px;
             background-color: $dark-grey;
         }
     }
@@ -46,5 +46,14 @@
 @media (min-width: $mobile) {
     .logo {
         flex: none;
+    }
+    .logo-round {
+        &--big {
+            & > i {
+                width: 120px;
+                height: 120px;
+                background-size: 90px;
+            }
+        }
     }
 }

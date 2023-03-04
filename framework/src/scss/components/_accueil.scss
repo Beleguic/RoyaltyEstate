@@ -1,9 +1,19 @@
+.article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    article {
+        margin-top: 2em;
+    }
+}
 section.banner {
     background-image: url('../src/assets/images/Photo_fond_accueuil_1.png');
     background-repeat: no-repeat;
     background-color: $dark-grey;
     background-position: 50% 0;
     background-size: cover;
+    height: 100vh;
     color: $white;
     .container {
         flex-direction: column;
@@ -51,6 +61,20 @@ section.banner {
         margin-bottom: 15vh;
     }
 }
+.about-us {
+    height: auto;
+    .container {
+        padding: 2em 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .secondaryTitle {
+        text-align: center;
+        margin: auto;
+    }
+
+}
 @media (max-width: $mobile) {
     
 }
@@ -75,6 +99,15 @@ section.banner {
         }
         .button.decouvrir {
             margin-bottom: 25vh;
+        }
+    }
+    .about-us {
+        .article-container {
+            flex-direction: row;
+            flex: 1;
+            article {
+                flex: 1;
+            }
         }
     }
 }
