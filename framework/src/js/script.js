@@ -79,6 +79,22 @@ $(document).ready(function(){
             toggleDropdownList(e.target);
         }
     });
+
+    // parallax & scrolling
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop();
+        if(scroll > 100) {
+            $('.banner-img').css("background-size","110%");
+            $('.banner-img').css("opacity","0.5");
+            $('.imageNosBiens > #dropdownMenu').css("visibility", "hidden");
+
+        }
+        else {
+            $('.banner-img').css("background-size","100%");
+            $('.banner-img').css("opacity","100%");
+            $('.imageNosBiens > #dropdownMenu').css("visibility", "visible");
+        }
+    });
 })
 
 //google maps 
