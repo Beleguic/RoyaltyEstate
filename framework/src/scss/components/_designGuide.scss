@@ -4,6 +4,7 @@ $pastel-beige: #FFD1BA;
 $pastel-blue: #48acf0;
 $pastel-violet: #B08BCC;
 .design_guide {
+    background-color: #cfbef5;
     ul {
         list-style: disc;
     }
@@ -73,6 +74,7 @@ $pastel-violet: #B08BCC;
         text-transform: uppercase;
     }
     #colorPalette {
+        padding: 2rem 0;
         flex-direction: row;
         flex-wrap: wrap;
         .colorDisplay{
@@ -112,5 +114,12 @@ $pastel-violet: #B08BCC;
     }
     .slider {
         margin: 0 auto;
+    }
+}
+@media (min-width: $mobile) {
+    .design_guide {
+        #colorPalette {
+            padding: 2rem 2rem;
+        }
     }
 }

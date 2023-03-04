@@ -6,14 +6,16 @@ html {
 }
 body {
     //background-image: url('../src/assets/images/acceuil.jpg');
-    background-color: #cfbef5;
+    background-color: $light-grey;
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: auto 100%;
-    height: 2000px;
     margin: 0;
     padding: 0;
     font-family: $font-poppins;
+}
+h1, h2 , h3 {
+    text-transform: uppercase;
 }
 a {
     color: currentColor;
@@ -27,4 +29,23 @@ nav, ul {
     width: 100%;
     height: 400px;
     background: #d6d6d6;
+}
+main > section {
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    display: flex;
+}
+@media (max-width: $mobile) {
+    .container {
+        padding-bottom: 50px;
+    }
+    section:nth-child(1) .container {
+        padding-top: 45px;
+    }   
+}
+
+@media (min-width: $mobile) {
+
 }

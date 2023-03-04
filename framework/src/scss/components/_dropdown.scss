@@ -79,7 +79,7 @@ section#dropdownMenu {
         }
     }
 }
-@media screen and (min-width: 800px) {
+@media (min-width: $mobile) {
     section#dropdownMenu {
         flex-direction: row;
         justify-content: space-around;
