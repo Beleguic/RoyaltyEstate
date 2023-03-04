@@ -8,6 +8,7 @@
     }
 }
 section.banner {
+    position: relative;
     background-image: url('../src/assets/images/Photo_fond_accueuil_1.png');
     background-repeat: no-repeat;
     background-color: $dark-grey;
@@ -124,6 +125,7 @@ section.banner {
 
 @media (min-width: $mobile) {
     section.banner {
+        background: none;
         h1 {
             max-width: 530px;
             width: 45vw;
@@ -138,6 +140,18 @@ section.banner {
                     margin-left: -5vw;
                 }
             }
+        }
+        .banner-img {
+            position: fixed;
+            background-image: url('../src/assets/images/Photo_fond_accueuil_1.png');
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: 100%;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+            transition: all 0.5s ease;
         }
     }
     .about-us {
