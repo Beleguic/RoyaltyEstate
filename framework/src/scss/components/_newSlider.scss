@@ -1,8 +1,8 @@
 //slider carousel
 #carrousel{
     width: auto;
-    height: auto;
-    border:solid 2px white;
+    height: 100vh;
+    //border:solid 2px white;
     position: relative;
     overflow: hidden;
 
@@ -18,6 +18,8 @@
         white-space: nowrap;
         .photo{
             //min-height: 400px;
+            height: 100vh !important;
+            background-position: center;
             margin: 0;
             display: inline-block;
             background-size: cover;

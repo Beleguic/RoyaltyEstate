@@ -69,11 +69,13 @@ section.banner {
         justify-content: space-around;
         align-items: center;
     }
-    .secondaryTitle {
-        text-align: center;
-        margin: auto;
-    }
 
+}
+.highlight {
+    height: 100vh;
+    #carrousel {
+        padding: 1em 0;
+    }
 }
 @media (max-width: $mobile) {
     
@@ -102,6 +104,7 @@ section.banner {
         }
     }
     .about-us {
+        min-height: 100vh;
         .article-container {
             flex-direction: row;
             flex: 1;
