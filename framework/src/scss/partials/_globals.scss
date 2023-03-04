@@ -47,14 +47,13 @@ main > section {
 }
 .container {
     display: flex;
+    padding: 50px 0;
 }
+section:nth-child(1) .container {
+    padding-top: 45px;
+}  
 @media (max-width: $mobile) {
-    .container {
-        padding-bottom: 50px;
-    }
-    section:nth-child(1) .container {
-        padding-top: 45px;
-    }   
+     
 }
 
 @media (min-width: $mobile) {

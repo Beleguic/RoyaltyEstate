@@ -24,8 +24,12 @@
         scroll-snap-align: start;
         overflow-x: hidden;
 
-        &.imageNosBien {
+        &.imageNosBiens {
+            flex-direction: column;
             justify-content: flex-end;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
         & .sliderCaptionNosBiens {
@@ -35,7 +39,7 @@
         
         @media (max-width: $mobile) {
             .sliderCaption {
-                bottom: 50px;
+                padding-bottom: calc(50px + 1em);
             }
         }
 

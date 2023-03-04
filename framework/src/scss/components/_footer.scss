@@ -1,6 +1,7 @@
 footer {
     font-family: $font-montserrat;
     font-weight: 300;
+    z-index: 3;
     @media (min-width: $mobile) {
         display: flex;
         flex-direction: column;
