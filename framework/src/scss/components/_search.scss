@@ -54,13 +54,13 @@
         width: 30px;
     }
 
-    & input[type="email"] {
+    & input[type="email"], & input[type="text"] {
         border: none;
         border-bottom: 1px solid $black;
         width: 80%;
     }
 
-    & input[type="email"]::placeholder {
+    & input[type="email"]::placeholder, & input[type="text"]::placeholder {
         font-size: 1rem;
         font-family: $font-poppins;
     }
