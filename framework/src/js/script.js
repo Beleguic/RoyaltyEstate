@@ -88,15 +88,30 @@ function initMap() {
   });
 }
 
+
+
+
 //New slider
+
 document.body.onload=function(){
     nbrImages = 3;
     position = 0;
+    carrousel = document.getElementById("carrousel");
     container = document.getElementById("container");
     leftBtn = document.getElementById("leftBtn");
     rightBtn = document.getElementById("rightBtn");
-    container.style.width = (800 * nbrImages) + "px";
+    //swipe avec le slider 
+    initialX = null;
+    initialY = null;
 
+    //calculer la bonne largeur pour le carrousel 
+    largeurEcran = window.innerWidth;
+    widthCarrousel = (largeurEcran * (90/100));
+
+    containerWidth = (widthCarrousel * nbrImages);
+    container.style.width = containerWidth + "px";
+    carrousel.style.maxWidth = containerWidth/nbrImages + "px";
+    //
     for(i = 1 ; i<= nbrImages ; i++){
         div = document.createElement("div");
         div.className = "photo";
@@ -106,21 +121,11 @@ document.body.onload=function(){
     displayBtnSlider();
 }
 rightBtn.onclick = function(){
-    if(position > -nbrImages+1){
-        position--;
-    }
-    container.style.transform= "translate("+ position * 800 + "px)";
-    container.style.transition = "all 0.5s ease";
-    displayBtnSlider();
+    moveLeft();
 }
 
 leftBtn.onclick = function(){
-    if(position < 0){
-        position++;
-    }
-    container.style.transform= "translate("+ position * 800 + "px)";
-    container.style.transition = "all 0.5s ease";
-    displayBtnSlider();
+    moveRight();
 }
 
 function displayBtnSlider(){
@@ -139,4 +144,86 @@ function displayBtnSlider(){
         leftBtn.style.visibility = "visible";
     }
 }
+function moveLeft() {
+    if (position > -nbrImages + 1) {
+      position--;
+    }
+    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
+}
+  
+function moveRight() {
+    if (position < 0) {
+      position++;
+    }
+    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transition = "all 0.5s ease";
+    displayBtnSlider();
+}
+//swipe slider (mobile)
+container.addEventListener("touchstart", startTouch);
+container.addEventListener("touchmove", moveTouch);
+container.addEventListener("touchend", endTouch);
+
+function startTouch(e) {
+    initialX = e.touches[0].clientX;
+    initialY = e.touches[0].clientY;
+}
+  
+function moveTouch(e) {
+    if (initialX === null) {
+        return;
+    }
+
+    if (initialY === null) {
+        return;
+    }
+
+    let currentX = e.touches[0].clientX;
+    let currentY = e.touches[0].clientY;
+
+    let diffX = initialX - currentX;
+    let diffY = initialY - currentY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // le déplacement est horizontal
+        if (diffX > 0) {
+        // swipe gauche
+        moveLeft();
+        } else {
+        // swipe droit
+        moveRight();
+        }
+    } else {
+        // le déplacement est vertical, ne fait rien
+        return;
+    }
+
+    initialX = null;
+    initialY = null;
+
+    e.preventDefault();
+}
+  
+function endTouch(e) {
+    initialX = null;
+    initialY = null;
+}
 //
+//resize the carousel 
+window.addEventListener('resize', onResize);
+function onResize() {
+    largeurEcran = window.innerWidth;
+    widthCarrousel = (largeurEcran * (90/100));
+
+    containerWidth = (widthCarrousel * nbrImages);
+    container.style.width = containerWidth + "px";
+    carrousel.style.maxWidth = containerWidth/nbrImages + "px";
+
+    var photos = document.querySelectorAll('.photo');
+
+    for (var i = 0; i < photos.length; i++) {
+    photos[i].style.width = containerWidth/nbrImages + "px"; 
+    }
+}
