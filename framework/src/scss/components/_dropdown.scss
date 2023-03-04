@@ -1,7 +1,17 @@
 section#dropdownMenu {
+    display: flex;
+    flex-direction: column;
     padding : 0.5em 0.5em 1em 0.5em;
     align-items: flex-start;
     min-width: 50vw;
+    width: 100%;
+    z-index: 2;
+    top: 5%;
+    position: fixed;
+    
+    &.design-guide-dropdown {
+        position: relative;
+    }
 }
 .dropdown {
     position: relative;
@@ -24,8 +34,7 @@ section#dropdownMenu {
         background: $white;
         border: 1px solid currentColor;
         border-radius: 20em;
-        padding: 1em;
-        height: 4rem;
+        padding: 0.5em 1em;
         text-align: left;
         &::after {
             content: "";
@@ -60,7 +69,7 @@ section#dropdownMenu {
         z-index: 10;
         background-color: $white;
         width: 100%;
-        margin: 0;
+        margin: -1px 0 0 0;
         border-radius: 0 0 20px 20px;
         height: 0;
         overflow: hidden;

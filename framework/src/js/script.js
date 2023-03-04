@@ -69,9 +69,16 @@ $(document).ready(function(){
         }
     })
     //filter menu
-    $('.dropdownMenuButton').on('click', function() {
-        $(this).toggleClass('toggle');
-    })
+    document.body.addEventListener('click', function(e) {
+        if(!e.target.classList.contains("dropdownButton")) {
+            console.log("haha");
+            console.log(e.target);
+            $('.dropdownButton').removeClass("toggle");
+        }
+        if(e.target.classList.contains("dropdownButton")) {
+            toggleDropdownList(e.target);
+        }
+    });
 })
 
 //google maps 
@@ -93,8 +100,23 @@ function initMap() {
   });
 }
 
-
-
+// dropdown
+function toggleDropdownList (button) {
+    document.querySelectorAll(".dropdownList").forEach(function(ul) {
+        console.log("sibling");
+        console.log(button.nextElementSibling);
+        if(ul.id == button.nextElementSibling.id) {
+            console.log("bingo")
+            console.log(ul)
+            button.classList.toggle("toggle");
+        }
+        else {
+            console.log("bozo")
+            console.log(ul.id)
+            ul.previousElementSibling.classList.remove("toggle");
+        }
+    });
+}
 
 //New slider
 

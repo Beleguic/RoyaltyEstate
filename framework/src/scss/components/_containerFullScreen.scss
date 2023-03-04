@@ -23,5 +23,25 @@
         background-size:  cover;
         scroll-snap-align: start;
         overflow-x: hidden;
+
+        &.imageNosBien {
+            justify-content: flex-end;
+        }
+
+        & .sliderCaptionNosBiens {
+            position: relative;
+            width: 100%;
+        }
+        
+        @media (max-width: $mobile) {
+            .sliderCaption {
+                bottom: 50px;
+            }
+        }
+
+        & a {
+            width: fit-content;
+            height: fit-content;
+        }
     }
 }

@@ -1,4 +1,4 @@
-section#sliderCaption {
+section.sliderCaptionSection {
     position: relative;
     height: 8em;
     width: 100%;
@@ -32,7 +32,7 @@ section#sliderCaption {
     }
 }
 @media screen  and (min-width: 800px){
-    section#sliderCaption {
+    section.sliderCaptionSection {
         width: 500px;
         margin: 0 auto;
     }
