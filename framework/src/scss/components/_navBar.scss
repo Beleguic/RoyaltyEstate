@@ -4,6 +4,7 @@ nav {
     }
     @media (max-width: $mobile) {
         .burger {
+            z-index: 4;
             bottom: 0;
             position: fixed;
             display: flex;
