@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-sacle=1">
+        <title>
+            Royalty Estate
+        </title>
+        <link rel="stylesheet" href="dist/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNGE5j9Ji3a30u_CO-kUBwhdqn9ayLOzo&callback=initMap"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <span>
+                    Royalty •
+                </span>
+                <img src="./src/assets/images/svg/modele-logo-chateau.svg">
+                <span>
+                    • estate
+                </span>
+            </div>
+        </header>
+        <section class="account" id="account">
+            <div>
+                <section id="login">
+                    <div>
+                        <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+                    </div>
+                    <div class="secondaryTitle">
+                        <h2 >
+                            Connectez-vous
+                        </h2>
+                    </div>
+                    <form action="/traitement" method="post">
+                        <div class="input">
+                            <img src="./src/assets/images/svg/account.svg"/>
+                            <input type="email" id="login-mail" name="user_mail" placeholder="Adresse mail">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/svg/lock.svg"/>
+                            <input type="password" id="login-password" name="user_password" placeholder="Mot de passe">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="stay_connected" name="user_stay_connected">
+                            <span>Rester connecté(e)</span>
+                        </div>
+                        <div>
+                            <a id="forgot-password" href="#">Mot de passe oublié ?</a>
+                        </div>
+                        <div>
+                            <a class="button">
+                                SE CONNECTER
+                            </a>
+                        </div>
+                        <div class="delimiter">
+                            <span></span>
+                            ou
+                            <span></span>
+                        </div>
+                        <div>
+                            <a class="button" id="inscription-link">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+                    </form>
+                </section>
+                <section id="inscription">
+                    <div>
+                        <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+                    </div>
+                    <div class="secondaryTitle">
+                        <h2 >
+                            Inscrivez-vous
+                        </h2>
+                    </div>
+                    <form action="/traitement" method="post">
+                        <div class="input">
+                            <img src="./src/assets/images/svg/account.svg"/>
+                            <input type="email" id="inscription-mail" name="user_mail" placeholder="Adresse mail">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/svg/account.svg"/>
+                            <input type="text" id="inscription-username" name="user_username" placeholder="Nom d'utilisateur">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/svg/lock.svg"/>
+                            <input type="password" id="inscription-password" name="user_password" placeholder="Mot de passe">
+                        </div>
+                        <div class="input">
+                            <img src="./src/assets/images/svg/lock.svg"/>
+                            <input type="password" id="inscription-password-2" name="user_password_2" placeholder="Confirmer mot de passe">
+                        </div>
+                        <div>
+                            <a class="button">
+                                S'INSCRIRE
+                            </a>
+                        </div>
+                        <div class="delimiter">
+                            <span></span>
+                            ou
+                            <span></span>
+                        </div>
+                        <div>
+                            <a class="button"  id="login-link">
+                                SE CONNECTER
+                            </a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+        <section class="burger-menu" id="burger-menu-id">
+            <div>
+                <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+            </div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Menu
+                </h2>
+            </div>
+            <a href="#">
+                <div>
+                    Acceuil
+                </div>
+                <div>
+                    >
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    Nos biens
+                </div>
+                <div>
+                    >
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    Contact
+                </div>
+                <div>
+                    >
+                </div>
+            </a>
+        </section>
+        <section class="search" id="search-id">
+            <div>
+                <img src="./src/assets/images/cross-circle.svg" class="close">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Que recherchez-vous ?">
+            </div>
+            <div>
+                <div class="secondaryTitle">
+                    <h2 >
+                        Suggestions
+                    </h2>
+                </div>
+            </div>
+            <a href="#">
+                <div>
+                    CHATEAUX EN FRANCE
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    CHATEAUX EN SUISSE
+                </div>
+            <a href="#">
+                <div>
+                    CHATEAUX HISTORIQUE
+                </div>
+            </a>
+            <a href="#">
+                <div>
+                    CHATEAUX MODERNE
+                </div>
+            </a>
+        </section>
+        <div class="container-scroll design_guide">
+            <div class="contained">
+                <section id="dropdownMenu">
+                    <div class="dropdown">
+                        <h2>Époque:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button><!--
+                        --><ul class="dropdownList" id="period-select">
+                            <li value="contemporain">Contemporain</li>
+                            <li value="classique">Classique</li>
+                            <li value="néo classique">Céo classique</li>
+                            <li value="baroque">Baroque</li>
+                            <li value="renaissance">Renaissance</li>
+                            <li value="moyen âge">Moyen Âge</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Localisation :</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="country-select">
+                            <li value="de">Allemagne</li>
+                            <li value="au">Autriche</li>
+                            <li value="be">Belgique</li>
+                            <li value="fr">France</li>
+                            <li value="gb">Grande Bretagne</li>
+                            <li value="ru">Russie</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Classement:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="period-select">
+                            <li value="mh">Monument historique</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="sectionCarousel">
+                    <div id="carrousel">
+                        <div id="container">
+                        </div>
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
+                    </div>
+                </section>
+            </div>
+            <div class="contained">
+                <section id="dropdownMenu">
+                    <div class="dropdown">
+                        <h2>Époque:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button><!--
+                        --><ul class="dropdownList" id="period-select">
+                            <li value="contemporain">Contemporain</li>
+                            <li value="classique">Classique</li>
+                            <li value="néo classique">Céo classique</li>
+                            <li value="baroque">Baroque</li>
+                            <li value="renaissance">Renaissance</li>
+                            <li value="moyen âge">Moyen Âge</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Localisation :</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="country-select">
+                            <li value="de">Allemagne</li>
+                            <li value="au">Autriche</li>
+                            <li value="be">Belgique</li>
+                            <li value="fr">France</li>
+                            <li value="gb">Grande Bretagne</li>
+                            <li value="ru">Russie</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Classement:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="period-select">
+                            <li value="mh">Monument historique</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="sectionCarousel">
+                    <div id="carrousel">
+                        <div id="container">
+                        </div>
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
+                    </div>
+                </section>
+            </div>
+            <div class="contained">
+                <section id="dropdownMenu">
+                    <div class="dropdown">
+                        <h2>Époque:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button><!--
+                        --><ul class="dropdownList" id="period-select">
+                            <li value="contemporain">Contemporain</li>
+                            <li value="classique">Classique</li>
+                            <li value="néo classique">Céo classique</li>
+                            <li value="baroque">Baroque</li>
+                            <li value="renaissance">Renaissance</li>
+                            <li value="moyen âge">Moyen Âge</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Localisation :</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="country-select">
+                            <li value="de">Allemagne</li>
+                            <li value="au">Autriche</li>
+                            <li value="be">Belgique</li>
+                            <li value="fr">France</li>
+                            <li value="gb">Grande Bretagne</li>
+                            <li value="ru">Russie</li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <h2>Classement:</h2>
+                        <button class="dropdownButton">veuillez sélectionner</button>
+                        <ul class="dropdownList" id="period-select">
+                            <li value="mh">Monument historique</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="sectionCarousel">
+                    <div id="carrousel">
+                        <div id="container">
+                        </div>
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="rightBtn">
+                        <img class="bouton" src="./src/assets/images/chevron-right.svg" id="leftBtn">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <nav>
+            <div>
+                <div class="nav">
+                    <div>
+                        Nos biens
+                    </div>
+                    <div>
+                        Contact
+                    </div>
+                    <div>
+                        Recherche
+                    </div>
+                    <div id="login-nav">
+                        Connexion
+                    </div>
+                </div>
+                <div class="burger">
+                    <img id="burger-menu-button-burger" src="./src/assets/images/menu-burger.svg"/>
+                    <img id="search-button-burger" src="./src/assets/images/search.svg"/>
+                    <img id="account-button-burger" src="./src/assets/images/account.svg"/>
+                </div>
+            </div>
+        </nav>
+        <footer>
+            <div class="logo-round">
+                <i></i>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        s'abonner à la newletter
+                        <br>
+                        <form>
+                            <input type="email" name="email" placeholder="Entrez votre adresse email">
+                            <input type="image" src="./src/assets/images/svg/arrow-right.svg" value="">
+                        </form>
+                    </div>
+                    <div>
+                        retrouvez-nous sur 
+                        <br>
+                        les réseaux sociaux
+                        <br>
+                        <a href="#">
+                            <img src="./src/assets/images/svg/instagram.svg"/>
+                        </a>
+                        <a href="#">
+                            <img src="./src/assets/images/svg/twitter.svg"/>
+                        </a>
+                        <a href="#">
+                            <img src="./src/assets/images/svg/facebook.svg"/>
+                        </a>
+                        <a href="#">
+                            <img src="./src/assets/images/svg/linkedin.svg"/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        conditions générales
+                        <br>
+                        paramètres de cookies
+                        <br>données personnelles
+                        <br>
+                        mentions légales
+                    </div>
+                    <div>
+                        mon compte
+                        <br>
+                        faq
+                        <br>
+                        contact
+                    </div>
+                </div>
+            </div>
+            <div>
+                Copyright © 2000 - 2023 Royalty Estate. Tous droits réservés.
+            </div>
+        </footer>
+    </body>
+    <script src="src/js/script.js" type="text/javascript"></script>
+</html>
