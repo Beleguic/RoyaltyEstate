@@ -1,31 +1,30 @@
-section.banner{
-    background-image: none !important;
-}
-.fade_page_biens{
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 22%;
-    h1{
-        margin-left: 10% !important;
+section.banner.slider{
+    background-image: none;
+    #carrousel {
+        #container {
+            .photo {
+                height: 100vh!important;
+                .sliderCaption {
+                    display: none;
+                }
+            }
+        }
     }
 }
-#description_du_biens{
-    height: auto;
-}
-
 .caracteristique_bien{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     .logo_caractéristique{
         height: 20px;
+        width: 20px;
+    }
+    ul {
+        padding: 0;
     }
     li{
         display: flex;
-        align-items: baseline;
+        align-items: center;
         width: auto;
         p{
             padding-left: 15%;
@@ -34,13 +33,7 @@ section.banner{
     }
     
 }
-
 @media (max-width: $mobile) {
-    .fade_page_biens{
-        h1{
-            margin-left: 4% !important;
-        }
-    }
     #description_du_biens {
         .container{
             flex-direction: column;
@@ -48,11 +41,13 @@ section.banner{
     }
     .caracteristique_bien{
         flex-direction: column;
-        justify-content: baseline;
+        div {
+            width: 60vw;
+            margin: auto;
+        }
         
         div:nth-child(2) {
             margin-top: -9%;
         }
-
-    }
+    } 
 }

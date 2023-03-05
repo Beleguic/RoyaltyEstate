@@ -1,3 +1,14 @@
+.col-2-lg {
+    .divEncadreContent{
+        width: 60%;
+    }
+}
+
+.col-3-lg {
+    .divEncadreContent{
+        width: 85%;
+    }
+}
 .article-container {
     display: flex;
     flex-direction: column;
@@ -14,7 +25,6 @@ section.banner {
     background-color: $dark-grey;
     background-position: 50% 0;
     background-size: cover;
-    height: 100vh;
     color: $white;
     .container {
         flex-direction: column;
@@ -63,7 +73,6 @@ section.banner {
     }
 }
 .about-us {
-    height: auto;
     .container {
         flex-direction: column;
         justify-content: space-around;
@@ -72,7 +81,6 @@ section.banner {
 
 }
 .highlight {
-    height: auto;
     min-height: 100vh;
     #carrousel {
         padding: 1em 0;
@@ -124,6 +132,13 @@ section.banner {
 }
 
 @media (min-width: $mobile) {
+    .article-container {
+        flex-direction: row;
+        align-items: flex-start;
+        article {
+            flex: 1 1;
+        }
+    }
     section.banner {
         background: none;
         h1 {
@@ -156,13 +171,6 @@ section.banner {
     }
     .about-us {
         min-height: 100vh;
-        .article-container {
-            flex-direction: row;
-            flex: 1;
-            article {
-                flex: 1;
-            }
-        }
     }
     .contact {
         &-infos{
