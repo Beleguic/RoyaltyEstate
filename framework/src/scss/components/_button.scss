@@ -25,6 +25,10 @@
         border: 1px $white solid;
         color: $white;
     }
+    &--black {
+        border: 1px $black solid;
+        color: $black;
+    }
 }
 .buttonDisplay {
     display: flex;
