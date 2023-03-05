@@ -157,7 +157,7 @@
             <img src="./src/assets/images/svg/cross-circle.svg" class="close">
         </div>
         <div>
-            <input type="email" name="email" placeholder="Que recherchez-vous ?">
+            <input type="search" name="search" placeholder="Que recherchez-vous ?">
         </div>
         <div>
             <div class="secondaryTitle">
@@ -185,6 +185,21 @@
                 CHATEAUX MODERNE
             </div>
         </a>
+    </section>
+    <section class="rdv" id="rdv">
+        <div>
+            <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+        </div>
+        <div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Prendre rendez-vous
+                </h2>
+            </div>
+        </div>
+        <input type="text" name="subject" placeholder="Sujet :">
+        <input type="text" name="message" placeholder="Message :">
+        <a class="button button--black">ENVOYER</a>
     </section>
     <main>
         <section class="banner slider fullPage">
@@ -302,7 +317,7 @@
         </section>
         <section>
             <div class="container" style="justify-content: center">
-                <a class="button button--black">PRENDRE RENDEZ-VOUS</a>
+                <a class="button button--black" id="rdv-id">PRENDRE RENDEZ-VOUS</a>
             </div>
         </section>
         <section id="description_du_biens">
@@ -368,20 +383,20 @@
     <nav>
         <div>
             <div class="nav">
-                    <div>
-                        <a href="./page_des_biens.html">
-                            Nos biens
-                        </a>
-                    </div>
-                    <div>
-                        Contact
-                    </div>
-                    <div>
-                        Recherche
-                    </div>
-                    <div id="login-nav">
-                        Connexion
-                    </div>
+                <div>
+                    <a href="./page_des_biens.html">
+                        Nos biens
+                    </a>
+                </div>
+                <div>
+                    Contact
+                </div>
+                <div id="search-nav">
+                    Recherche
+                </div>
+                <div id="login-nav">
+                    Connexion
+                </div>
             </div>
             <div class="burger">
                 <img id="burger-menu-button-burger" src="./src/assets/images/svg/menu-burger.svg"/>
