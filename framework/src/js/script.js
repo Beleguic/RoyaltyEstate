@@ -103,7 +103,7 @@ $(document).ready(function(){
         }
     })
 
-    //filter menu
+    //dropdown menu
     document.body.addEventListener('click', function(e) {
         if(!e.target.classList.contains("dropdownButton")) {
             $('.dropdownButton').removeClass("toggle");
