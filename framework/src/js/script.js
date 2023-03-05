@@ -3,12 +3,14 @@ $(document).ready(function(){
     let account = document.getElementById('account')
     let burgerMenu = document.getElementById('burger-menu-id')
     let search = document.getElementById('search-id')
+    let rdv = document.getElementById('rdv')
 
     //close all
     $('.close').on('click',function(){
         burgerMenu.style.bottom = "-100vh";
         account.style.bottom = "-100vh";
         search.style.bottom = "-100vh";
+        rdv.style.bottom = "-100vh";
     })
 
     //burger menu
@@ -43,6 +45,16 @@ $(document).ready(function(){
             search.style.bottom = "-100vh";
         }
     })
+
+    //rdv
+    $('#rdv-id').on('click',function(){
+        if (rdv.style.bottom === "0px"){
+            rdv.style.bottom = "-100vh";
+        } else {
+            rdv.style.bottom = "0";
+        }
+    })
+
     document.getElementById('inscription').style.left = "100vw";
     document.getElementById('login').style.left = "0";
     $('#login-nav, #login-link').on('click',function(){
@@ -60,14 +72,37 @@ $(document).ready(function(){
         document.getElementById('Inscr-ConfirmedText').style.visibility = "visible";
     })
     //navbar pc
+    //login
     $('#login-nav').on('click',function(){
-        let account = document.getElementById('account')
         if (account.style.top === "45px"){
             account.style.top = "-85vh";
         } else {
             account.style.top = "45px";
+            search.style.top = "-85vh";
+            rdv.style.top = "-85vh";
         }
     })
+    //search
+    $('#search-nav').on('click',function(){
+        if (search.style.top === "45px"){
+            search.style.top = "-85vh";
+        } else {
+            search.style.top = "45px";
+            account.style.top = "-85vh";
+            rdv.style.top = "-85vh";
+        }
+    })
+    //rdv
+    $('#rdv-id').on('click',function(){
+        if (rdv.style.top === "45px"){
+            rdv.style.top = "-85vh";
+        } else {
+            rdv.style.top = "45px";
+            account.style.top = "-85vh";
+            search.style.top = "-85vh";
+        }
+    })
+
     //filter menu
     document.body.addEventListener('click', function(e) {
         if(!e.target.classList.contains("dropdownButton")) {

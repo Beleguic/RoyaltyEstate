@@ -12,15 +12,17 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <span>
-                    Royalty •
-                </span>
-                <img src="./src/assets/images/svg/modele-logo-chateau.svg">
-                <span>
-                    • estate
-                </span>
-            </div>
+            <a href="./index.html">
+                <div class="logo">
+                    <span>
+                        Royalty •
+                    </span>
+                    <img src="./src/assets/images/svg/modele-logo-chateau.svg">
+                    <span>
+                        • estate
+                    </span>
+                </div>
+            </a>
         </header>
         <section class="account" id="account">
             <div>
@@ -126,37 +128,39 @@
                     Menu
                 </h2>
             </div>
-            <a href="#">
+            <div>
                 <div>
                     Acceuil
                 </div>
                 <div>
                     &#62;
                 </div>
-            </a>
-            <a href="#">
+            </div>
+            <div>
                 <div>
-                    Nos biens
+                    <a href="./page_des_biens.html">
+                        Nos biens
+                    </a>
                 </div>
                 <div>
                     &#62;
                 </div>
-            </a>
-            <a href="#">
+            </div>
+            <div>
                 <div>
                     Contact
                 </div>
                 <div>
                     &#62;
                 </div>
-            </a>
+            </div>
         </section>
         <section class="search" id="search-id">
             <div>
                 <img src="./src/assets/images/svg/cross-circle.svg" class="close">
             </div>
             <div>
-                <input type="email" name="email" placeholder="Que recherchez-vous ?">
+                <input type="search" name="search" placeholder="Que recherchez-vous ?">
             </div>
             <div>
                 <div class="secondaryTitle">
@@ -223,7 +227,7 @@
                     <section class="sliderCaptionNosBiens sliderCaptionSection">
                         <div class="sliderCaption">
                             <div class="secondaryTitle">
-                                <h2><a href="#">Chateau 1</a></h2>
+                                <h2><a href="./page_du_bien1.html">Chateau 1</a></h2>
                             </div>
                             <h3>- Country</h3>
                         </div>
@@ -233,7 +237,7 @@
                     <section class="sliderCaptionNosBiens sliderCaptionSection">
                         <div class="sliderCaption">
                             <div class="secondaryTitle">
-                                <h2><a href="#">Chateau 2</a></h2>
+                                <h2><a href="./page_du_bien2.html">Chateau 2</a></h2>
                             </div>
                             <h3>- Country</h3>
                         </div>
@@ -243,7 +247,7 @@
                     <section class="sliderCaptionNosBiens sliderCaptionSection">
                         <div class="sliderCaption">
                             <div class="secondaryTitle">
-                                <h2><a href="#">Chateau 3</a></h2>
+                                <h2><a href="./page_du_bien3.html">Chateau 3</a></h2>
                             </div>
                             <h3>- Country</h3>
                         </div>
@@ -254,12 +258,14 @@
             <div>
                 <div class="nav">
                     <div>
-                        Nos biens
+                        <a href="./page_des_biens.html">
+                            Nos biens
+                        </a>
                     </div>
                     <div>
                         Contact
                     </div>
-                    <div>
+                    <div id="search-nav">
                         Recherche
                     </div>
                     <div id="login-nav">
