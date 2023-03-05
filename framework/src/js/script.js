@@ -154,8 +154,18 @@ $(document).ready(function(){
 
 //google maps 
 function initMap() {
+    //get latitude and longitude
+    if (typeof window.latidudeMap !== "undefined" && typeof window.longitudeMap !== "undefined") {
+        //la variable existe
+        latidudeMap = window.latidudeMap;
+        longitudeMap = window.longitudeMap;
+    } else {
+        // La variable n'existe pas
+        latidudeMap = 47.61718971319287;
+        longitudeMap = 1.5176677496757647;
+    }
     const selector = document.getElementById("map")
-    const chateauChambord = { lat: 47.61718971319287, lng: 1.5176677496757647};  
+    const chateauChambord = { lat: latidudeMap, lng: longitudeMap};  
     const options = {
       center: chateauChambord,
       zoom : 5,
@@ -193,12 +203,21 @@ document.body.onload=function(){
     leftBtn = document.getElementById("leftBtn");
     rightBtn = document.getElementById("rightBtn");
 
+    //get the size of the slider 
     if (typeof window.LargeurSliderEnPourcentage !== "undefined") {
         //la variable existe
         largeurSlider = window.LargeurSliderEnPourcentage;
     } else {
         // La variable n'existe pas
         largeurSlider = 100;
+    }
+    //retrieve the path of the slider images 
+    if (typeof window.PathImageSlider !== "undefined") {
+        //la variable existe
+        PathImages = window.PathImageSlider;
+    } else {
+        // La variable n'existe pas
+        PathImages = "./src/assets/images/chateaux/chateau-nouveauté-";
     }
     
     //variable for swipe avec le slider 
@@ -221,11 +240,11 @@ document.body.onload=function(){
         div.className = "photo";
         div.style.width = widthImages + "px";
         div.style.height = heightImages+"px";
-        div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
+        div.style.backgroundImage = "url('"+ PathImages + i + ".jpg')";
 
         caption = document.createElement("div");
         caption.className = "sliderCaption";
-        caption.innerHTML = '<div class="secondaryTitle"><h2><a href="./page_du_bien.html">Château ' + i + '</a></h2></div><h3>- Pays</h3>';
+        caption.innerHTML = '<div class="secondaryTitle"><h2><a href="./page_du_bien.html">Château ' + i + '</a></h2></div><h3>-     </h3>';
         div.appendChild(caption);
         container.appendChild(div);
 
