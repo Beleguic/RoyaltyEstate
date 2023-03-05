@@ -9,15 +9,17 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <span>
-                Royalty •
-            </span>
-            <img src="./src/assets/images/svg/modele-logo-chateau.svg">
-            <span>
-                • estate
-            </span>
-        </div>
+        <a href="./index.html">
+            <div class="logo">
+                <span>
+                    Royalty •
+                </span>
+                <img src="./src/assets/images/svg/modele-logo-chateau.svg">
+                <span>
+                    • estate
+                </span>
+            </div>
+        </a>
     </header>
     <section class="account" id="account">
         <div>
@@ -123,37 +125,39 @@
                 Menu
             </h2>
         </div>
-        <a href="#">
+        <div>
             <div>
                 Acceuil
             </div>
             <div>
                 &#62;
             </div>
-        </a>
-        <a href="./page_des_biens.html">
+        </div>
+        <div>
             <div>
-                Nos biens
+                <a href="./page_des_biens.html">
+                    Nos biens
+                </a>
             </div>
             <div>
                 &#62;
             </div>
-        </a>
-        <a href="#">
+        </div>
+        <div>
             <div>
                 Contact
             </div>
             <div>
                 &#62;
             </div>
-        </a>
+        </div>
     </section>
     <section class="search" id="search-id">
         <div>
             <img src="./src/assets/images/svg/cross-circle.svg" class="close">
         </div>
         <div>
-            <input type="email" name="email" placeholder="Que recherchez-vous ?">
+            <input type="search" name="search" placeholder="Que recherchez-vous ?">
         </div>
         <div>
             <div class="secondaryTitle">
@@ -181,6 +185,21 @@
                 CHATEAUX MODERNE
             </div>
         </a>
+    </section>
+    <section class="rdv" id="rdv">
+        <div>
+            <img src="./src/assets/images/svg/cross-circle.svg" class="close">
+        </div>
+        <div>
+            <div class="secondaryTitle">
+                <h2 >
+                    Prendre rendez-vous
+                </h2>
+            </div>
+        </div>
+        <input type="text" name="subject" placeholder="Sujet :">
+        <input type="text" name="message" placeholder="Message :">
+        <a class="button button--black">ENVOYER</a>
     </section>
     <main>
         <section class="banner slider fullPage">
@@ -298,7 +317,7 @@
         </section>
         <section>
             <div class="container" style="justify-content: center">
-                <a class="button button--black">PRENDRE RENDEZ-VOUS</a>
+                <a class="button button--black" id="rdv-id">PRENDRE RENDEZ-VOUS</a>
             </div>
         </section>
         <section id="description_du_biens">
@@ -365,12 +384,14 @@
         <div>
             <div class="nav">
                 <div>
-                    <a href="./page_des_biens.html">Nos biens</a>
+                    <a href="./page_des_biens.html">
+                        Nos biens
+                    </a>
                 </div>
                 <div>
                     Contact
                 </div>
-                <div>
+                <div id="search-nav">
                     Recherche
                 </div>
                 <div id="login-nav">

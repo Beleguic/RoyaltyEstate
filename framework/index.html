@@ -8,15 +8,17 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <span>
-                Royalty •
-            </span>
-            <img src="./src/assets/images/svg/modele-logo-chateau.svg">
-            <span>
-                • estate
-            </span>
-        </div>
+        <a href="./index.html">
+            <div class="logo">
+                <span>
+                    Royalty •
+                </span>
+                <img src="./src/assets/images/svg/modele-logo-chateau.svg">
+                <span>
+                    • estate
+                </span>
+            </div>
+        </a>
     </header>
     <section class="account" id="account">
         <div>
@@ -122,37 +124,39 @@
                 Menu
             </h2>
         </div>
-        <a href="#">
+        <div>
             <div>
                 Acceuil
             </div>
             <div>
                 &#62;
             </div>
-        </a>
-        <a href="./page_des_biens.html">
+        </div>
+        <div>
             <div>
-                Nos biens
+                <a href="./page_des_biens.html">
+                    Nos biens
+                </a>
             </div>
             <div>
                 &#62;
             </div>
-        </a>
-        <a href="#">
+        </div>
+        <div>
             <div>
                 Contact
             </div>
             <div>
                 &#62;
             </div>
-        </a>
+        </div>
     </section>
     <section class="search" id="search-id">
         <div>
             <img src="./src/assets/images/svg/cross-circle.svg" class="close">
         </div>
         <div>
-            <input type="email" name="email" placeholder="Que recherchez-vous ?">
+            <input type="search" name="search" placeholder="Que recherchez-vous ?">
         </div>
         <div>
             <div class="secondaryTitle">
@@ -283,26 +287,20 @@
     <nav>
         <div>
             <div class="nav">
-                <a href="./page_des_biens.html"></a>
-                    <div>
+                <div>
+                    <a href="./page_des_biens.html">
                         Nos biens
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Contact
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Recherche
-                    </div>
-                </a>
-                <a href="#">
-                    <div id="login-nav">
-                        Connexion
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div>
+                    Contact
+                </div>
+                <div id="search-nav">
+                    Recherche
+                </div>
+                <div id="login-nav">
+                    Connexion
+                </div>
             </div>
             <div class="burger">
                 <img id="burger-menu-button-burger" src="./src/assets/images/svg/menu-burger.svg"/>

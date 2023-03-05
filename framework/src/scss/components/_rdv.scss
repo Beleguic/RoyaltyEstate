@@ -1,4 +1,4 @@
-.search {
+.rdv {
     z-index: 5;
     border: 1px solid $grey;
 
@@ -13,7 +13,7 @@
         top: -85vh;
         width: 30vw;
         right: 0;
-        position: absolute;
+        position: fixed;
 
         & .close {
             display: none;
@@ -65,14 +65,33 @@
         width: 30px;
     }
 
-    & input[type="search"], & input[type="text"] {
+    & input[type="text"] {
         border: none;
-        border-bottom: 1px solid $black;
+        border: 1px solid $black;
+        border-radius: 20px;
         width: 80%;
+        padding: 10px;
     }
 
-    & input[type="search"]::placeholder, & input[type="text"]::placeholder {
+    & input[type="text"]::placeholder {
         font-size: 1rem;
         font-family: $font-poppins;
+    }
+
+    & input[name="message"]::placeholder {
+        position: fixed;
+        top: 10px;
+
+        @media (max-width: $mobile) {
+            position: relative;
+        }
+    }
+
+    & input[name="message"] {
+        height: 30vh;
+    }
+
+    & .button {
+        margin-bottom: 4vh;
     }
 }

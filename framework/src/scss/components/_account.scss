@@ -1,5 +1,6 @@
 .account {
     z-index: 5;
+    border: 1px solid $grey;
 
     @media (max-width: $mobile) {
         bottom: -100vh;
