@@ -15,6 +15,7 @@ section.sliderCaptionSection {
     color: $white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    white-space: normal;
     background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
     
     .secondaryTitle {
@@ -32,9 +33,12 @@ section.sliderCaptionSection {
         font-size: 1.25rem;
     }
 }
-@media screen  and (min-width: 800px){
+@media (min-width: $mobile) {
     section.sliderCaptionSection {
         width: 500px;
         margin: 0 auto;
+    }
+    .sliderCaption {
+        white-space: nowrap;
     }
 }

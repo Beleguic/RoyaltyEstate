@@ -71,8 +71,6 @@ $(document).ready(function(){
     //filter menu
     document.body.addEventListener('click', function(e) {
         if(!e.target.classList.contains("dropdownButton")) {
-            console.log("haha");
-            console.log(e.target);
             $('.dropdownButton').removeClass("toggle");
         }
         if(e.target.classList.contains("dropdownButton")) {
@@ -119,16 +117,10 @@ function initMap() {
 // dropdown
 function toggleDropdownList (button) {
     document.querySelectorAll(".dropdownList").forEach(function(ul) {
-        console.log("sibling");
-        console.log(button.nextElementSibling);
         if(ul.id == button.nextElementSibling.id) {
-            console.log("bingo")
-            console.log(ul)
             button.classList.toggle("toggle");
         }
         else {
-            console.log("bozo")
-            console.log(ul.id)
             ul.previousElementSibling.classList.remove("toggle");
         }
     });
@@ -173,7 +165,14 @@ document.body.onload=function(){
         div.style.width = widthImages + "px";
         div.style.height = heightImages+"px";
         div.style.backgroundImage = "url('./src/assets/images/chateaux/chateau-" + i + ".jpg')";
+
+        caption = document.createElement("div");
+        caption.className = "sliderCaption";
+        caption.innerHTML = '<div class="secondaryTitle"><h2><a href="./page_du_bien.html">Château ' + i + '</a></h2></div><h3>- Pays</h3>';
+        div.appendChild(caption);
         container.appendChild(div);
+
+        
     }
     displayBtnSlider();
 }
@@ -198,7 +197,7 @@ function moveLeft() {
     if (position > -nbrImages + 1) {
       position--;
     }
-    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transform = "translateX(" + position * widthCarrousel + "px)";
     container.style.transition = "all 0.5s ease";
     displayBtnSlider();
 }
@@ -207,7 +206,7 @@ function moveRight() {
     if (position < 0) {
       position++;
     }
-    container.style.transform = "translate(" + position * widthCarrousel + "px)";
+    container.style.transform = "translateX(" + position * widthCarrousel + "px)";
     container.style.transition = "all 0.5s ease";
     displayBtnSlider();
 }

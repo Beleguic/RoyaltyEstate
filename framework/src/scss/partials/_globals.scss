@@ -41,7 +41,9 @@ nav, ul {
     background: #d6d6d6;
 }
 main > section {
-    height: 100vh;
+    &.fullPage {  
+        height: 100vh;
+    }
     width: 100%;
     background-color: $white;
 }
